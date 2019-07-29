@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dbConfig>
+	<!-- 
+		redis配置: 1. redis服务器地址(ip port)
+				2. jedis连接池配置
+		
+		redis配置只有一份, 配置多个只取第一份配置
+	 -->
+	<redis>
+		<properties key="ip" value="127.0.0.1"/>
+		<properties key="port" value="6379"/>
+		<properties key="maxActive" value="50"/>
+		<properties key="maxIdle" value="20"/>
+		<properties key="maxWait" value="1000"/>
+		<properties key="testOnBorrow" value="true"/>
+		<properties key="testOnReturn" value="true"/>
+		<properties key="isOpen" value="true"/>
+	</redis>
+	
+	
+	<!-- 
+		mysql配置: druid连接池配置
+		mysql配置可配多个, 通过areaId区分, 合服添加的mysql配置即可
+	 -->
+<!-- 	 	<mysql> -->
+<!-- 		<properties key="areaDbId" value="8"/> -->
+<!-- 		<properties key="url" value="jdbc:mysql://192.168.200.35:3306/game_ftwar?useUnicode=true&amp;characterEncoding=utf-8"/> -->
+<!-- 		<properties key="driverClassName" value="com.mysql.jdbc.Driver"/> -->
+<!-- 		<properties key="username" value="root"/> -->
+<!-- 		<properties key="password" value="123456"/> -->
+<!-- 		<properties key="initialSize" value="10"/> -->
+<!-- 		<properties key="maxActive" value="50"/> -->
+<!-- 	</mysql> -->
+	
+	<mysql>
+		<properties key="areaDbId" value="8"/>
+		<properties key="url" value="jdbc:mysql://127.0.0.1:3306/lszj_game?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai"/>
+		<properties key="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<properties key="username" value="root"/>
+		<properties key="password" value="123456"/>
+		<properties key="initialSize" value="10"/>
+		<properties key="maxActive" value="50"/>
+	</mysql>
+	
+	
+	
+	<!-- 
+		mysql配置: druid连接池配置
+		mysql配置可配多个, 通过areaId区分, 合服添加的mysql配置即可
+		
+		登录服 dbServer
+	 
+	<mysql>
+		<properties key="areaDbId" value="10000"/>
+		<properties key="url" value="jdbc:mysql://127.0.0.1:3306/login_ftwar?useUnicode=true&amp;characterEncoding=utf-8"/>
+		<properties key="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<properties key="username" value="root"/>
+		<properties key="password" value="root"/>
+		<properties key="initialSize" value="10"/>
+		<properties key="maxActive" value="50"/>
+	</mysql>
+	-->
+	
+	
+</dbConfig>

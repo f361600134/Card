@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	
+	<!-- 
+		id: 数据服编号, 自定义
+		ip: 数据服地址
+		port: 数据服端口
+		
+		映射表可以配置多份数据服信息, client程序保持多个数据服的连接	
+	 -->
+	<dbserver>
+		<properties key="id" value="1001"/>
+<!-- 		<properties key="ip" value="127.0.0.1"/> -->
+<!-- 		<properties key="port" value="6370"/> -->
+		<properties key="ip" value="127.0.0.1"/>
+		<properties key="port" value="3306"/>
+	</dbserver>
+	
+	
+</mapping>

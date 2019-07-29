@@ -1,0 +1,137 @@
+2019-07-24 21:00:45.765 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 6876 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:00:45.770 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:00:46.512 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:00:46.513 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:00:46.513 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:00:47.824 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+com.fatiny.cardlogin.common.config.DefineConfig is annotated with @ConfigurationProperties and @Component. This may cause the @ConfigurationProperties bean to be registered twice.
+
+Action:
+
+Remove @Component from com.fatiny.cardlogin.common.config.DefineConfig or consider disabling automatic @ConfigurationProperties scanning.
+
+2019-07-24 21:02:57.832 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 7304 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:02:57.847 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:02:58.583 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:02:58.584 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:02:58.584 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:03:00.254 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+com.fatiny.cardlogin.common.config.DefineConfig is annotated with @ConfigurationProperties and @Component. This may cause the @ConfigurationProperties bean to be registered twice.
+
+Action:
+
+Remove @Component from com.fatiny.cardlogin.common.config.DefineConfig or consider disabling automatic @ConfigurationProperties scanning.
+
+2019-07-24 21:03:43.060 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 6940 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:03:43.066 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:03:43.663 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:03:43.664 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:03:43.665 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:03:45.039 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+com.fatiny.cardlogin.common.config.DefineConfig is annotated with @ConfigurationProperties and @Component. This may cause the @ConfigurationProperties bean to be registered twice.
+
+Action:
+
+Remove @Component from com.fatiny.cardlogin.common.config.DefineConfig or consider disabling automatic @ConfigurationProperties scanning.
+
+2019-07-24 21:04:30.522 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 8280 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:04:30.537 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:04:31.264 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:04:31.264 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:04:31.265 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:04:32.737 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+com.fatiny.cardlogin.common.config.DefineConfig is annotated with @ConfigurationProperties and @Component. This may cause the @ConfigurationProperties bean to be registered twice.
+
+Action:
+
+Remove @Component from com.fatiny.cardlogin.common.config.DefineConfig or consider disabling automatic @ConfigurationProperties scanning.
+
+2019-07-24 21:06:26.854 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 7444 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:06:26.863 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:06:27.524 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:06:27.524 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:06:27.525 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:06:29.020 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+com.fatiny.cardlogin.common.generator.SnowflakeGenerator is annotated with @ConfigurationProperties and @Component. This may cause the @ConfigurationProperties bean to be registered twice.
+
+Action:
+
+Remove @Component from com.fatiny.cardlogin.common.generator.SnowflakeGenerator or consider disabling automatic @ConfigurationProperties scanning.
+
+2019-07-24 21:07:06.832 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 9112 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:07:06.842 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:07:07.433 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:07:07.434 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:07:07.434 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:07:08.745 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+com.fatiny.cardlogin.common.generator.SnowflakeGenerator is annotated with @ConfigurationProperties and @Component. This may cause the @ConfigurationProperties bean to be registered twice.
+
+Action:
+
+Remove @Component from com.fatiny.cardlogin.common.generator.SnowflakeGenerator or consider disabling automatic @ConfigurationProperties scanning.
+
+2019-07-24 21:07:40.377 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - Starting CardLoginApplication on cql-PC with PID 5508 (D:\maya\workspace\card\card-login\target\classes started by Administrator in D:\maya\workspace\card\card-login)
+2019-07-24 21:07:40.382 [restartedMain] INFO  com.fatiny.cardlogin.CardLoginApplication - The following profiles are active: dev
+2019-07-24 21:07:40.992 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\maven\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/maven/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-07-24 21:07:40.993 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 21:07:40.993 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 21:07:42.602 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'dataSource' defined in class path resource [io/shardingjdbc/spring/boot/SpringBootConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=io.shardingjdbc.spring.boot.SpringBootConfiguration; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/shardingjdbc/spring/boot/SpringBootConfiguration.class]] for bean 'dataSource': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]] bound.
+2019-07-24 21:07:42.626 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-24 21:07:42.630 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'dataSource', defined in class path resource [io/shardingjdbc/spring/boot/SpringBootConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+

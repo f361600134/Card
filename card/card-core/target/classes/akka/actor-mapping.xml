@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akka>
+
+	<test-actor>
+		<properties key="id" value="10001"/>
+		<properties key="ip" value="127.0.0.1"/>
+		<properties key="port" value="7003"/>
+	</test-actor>
+	
+	<login-actor>
+		<properties key="id" value="10002"/>
+		<properties key="ip" value="127.0.0.1"/>
+		<properties key="port" value="7007"/>
+	</login-actor>
+	
+</akka>
