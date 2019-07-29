@@ -1,4 +1,4 @@
-package com.fatiny.cardlogin.domain.entity;
+package com.fatiny.cardloginplus.domain.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -8,14 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fatiny.cardlogin.domain.OrderStatusEnum;
-
 @Entity
 @Table(name = "order_info")
 public class OrderInfo implements Serializable {
 	
 	/**
-	 * 使用雪花id生成器生成唯一的订单号
+	 * 考虑使用雪花id生成器生成唯一的订单号
 	 */
 	@Id
 	@Column(name = "orderId")

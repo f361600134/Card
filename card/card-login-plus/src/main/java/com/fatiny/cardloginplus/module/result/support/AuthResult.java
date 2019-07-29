@@ -1,8 +1,8 @@
-package com.fatiny.cardloginplus.common.result.support;
+package com.fatiny.cardloginplus.module.result.support;
 
-import com.fatiny.cardloginplus.common.result.ErrorCodeEnum;
-import com.fatiny.cardloginplus.common.result.ErrorResult;
-import com.fatiny.cardloginplus.common.result.IResult;
+import com.fatiny.cardloginplus.module.result.ErrorCodeEnum;
+import com.fatiny.cardloginplus.module.result.ErrorResult;
+import com.fatiny.cardloginplus.module.result.IResult;
 
 public class AuthResult extends ErrorResult{
 	//成功

@@ -1,6 +1,7 @@
 package com.fatiny.cardlogin.domain.entity;
 
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,6 +9,7 @@ import javax.persistence.Table;
 @Table(name = "channel_server")
 public class ChannelServer {
 	
+	@EmbeddedId
 	@Column(name = "channel")
     private Integer channel;
 

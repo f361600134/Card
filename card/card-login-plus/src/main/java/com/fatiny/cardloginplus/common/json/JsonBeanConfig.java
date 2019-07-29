@@ -1,4 +1,4 @@
-package com.fatiny.cardlogin.common.config;
+package com.fatiny.cardloginplus.common.json;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.fatiny.cardlogin.util.DateUtils;
+import com.fatiny.cardloginplus.util.DateUtils;
 
 /**
  * springboot 默认使用的是jackson作为json解析工具, 因为不擅长使用jackson,

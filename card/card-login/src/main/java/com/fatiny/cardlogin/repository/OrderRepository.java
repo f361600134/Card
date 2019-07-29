@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.fatiny.cardlogin.domain.entity.OrderInfo;
 
 @Repository
-@Qualifier(value = "orderRepository")
 public interface OrderRepository extends JpaRepository<OrderInfo, Long> {
 
 }

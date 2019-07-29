@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import com.fatiny.cardlogin.domain.entity.ChannelServer;
 
 @Repository
-@Qualifier(value = "channelServerRepository")
 public interface ChannelServerRepository extends JpaRepository<ChannelServer, Integer> {
 	
 	@Query("select * from server_status order by channel, serverId")

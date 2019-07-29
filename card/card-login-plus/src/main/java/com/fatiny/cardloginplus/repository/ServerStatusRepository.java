@@ -1,10 +1,9 @@
-package com.fatiny.cardlogin.repository;
+package com.fatiny.cardloginplus.repository;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.fatiny.cardlogin.domain.entity.ServerStatus;
+import com.fatiny.cardloginplus.domain.entity.ServerStatus;
 
 @Repository
 public interface ServerStatusRepository extends JpaRepository<ServerStatus, Integer> {

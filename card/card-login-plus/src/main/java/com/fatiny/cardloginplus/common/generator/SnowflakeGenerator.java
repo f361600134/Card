@@ -1,10 +1,10 @@
-package com.fatiny.cardlogin.common.generator;
+package com.fatiny.cardloginplus.common.generator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.fatiny.cardlogin.util.DateUtils;
+import com.fatiny.cardloginplus.util.DateUtils;
 
 /**
  * base on Twitter <b>Snowflake</b>.
@@ -60,6 +60,7 @@ public class SnowflakeGenerator {
 	 private final long workerIdBits = 10L; //1<<10 == 1024个子服务器
 	 private final long sequenceBits = 12L; //序列
 
+	
 	/*
 	 * max values of timeStamp, workerId, datacenterId and sequence
 	 */

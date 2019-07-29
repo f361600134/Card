@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.common.result;
+package com.fatiny.cardloginplus.module.result;
 
 import com.google.common.base.Preconditions;
 

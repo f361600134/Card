@@ -1,4 +1,4 @@
-package com.fatiny.cardlogin.domain.entity;
+package com.fatiny.cardloginplus.domain.entity;
 
 import java.util.Date;
 

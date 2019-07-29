@@ -5,12 +5,14 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "actor_info")
 public class ActorInfo implements Serializable {
 	
+	@Id
 	@Column(name = "actorId")
     private Integer actorId;
 

@@ -1,4 +1,4 @@
-package com.fatiny.cardlogin.service;
+package com.fatiny.cardloginplus.service;
 
 import java.util.Optional;
 
@@ -8,20 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import com.fatiny.cardlogin.common.generator.SnowBeanConfig;
-import com.fatiny.cardlogin.domain.OrderStatusEnum;
-import com.fatiny.cardlogin.domain.entity.OrderInfo;
-import com.fatiny.cardlogin.module.common.impl.PreOrderParam;
-import com.fatiny.cardlogin.repository.OrderRepository;
+import com.fatiny.cardloginplus.common.generator.SnowflakeGenerator;
+import com.fatiny.cardloginplus.domain.entity.OrderInfo;
+import com.fatiny.cardloginplus.domain.entity.OrderStatusEnum;
+import com.fatiny.cardloginplus.module.base.PreOrderParam;
+import com.fatiny.cardloginplus.repository.OrderInfoRepository;
 
 @Service
 public class OrderService {
 	
 	@Autowired
-	private OrderRepository orderRepository;
+	private OrderInfoRepository orderRepository;
 	
 	@Autowired
-	private SnowBeanConfig generator;
+	private SnowflakeGenerator generator;
 	
 	public final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
@@ -31,7 +31,7 @@ public class OrderService {
 	public OrderInfo createOrder(PreOrderParam param) {
 		OrderInfo orderInfo = new OrderInfo();
 		try {
-			long orderId = generator.getIdWorker().nextId();
+			long orderId = generator.nextId();
 			orderInfo.setOrderId(orderId);
 			orderInfo.setItemId(Integer.valueOf(param.getPayItemId()));
 			orderInfo.setServerId(Integer.valueOf(param.getServerId()));
