@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.module.base;
+package com.fatiny.cardloginplus.module.core.base;
 
 public interface IExchargeParam {
 

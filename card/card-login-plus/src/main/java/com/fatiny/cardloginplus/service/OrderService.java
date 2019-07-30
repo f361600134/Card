@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.fatiny.cardloginplus.common.generator.SnowflakeGenerator;
 import com.fatiny.cardloginplus.domain.entity.OrderInfo;
 import com.fatiny.cardloginplus.domain.entity.OrderStatusEnum;
-import com.fatiny.cardloginplus.module.base.PreOrderParam;
+import com.fatiny.cardloginplus.module.core.base.PreOrderParam;
 import com.fatiny.cardloginplus.repository.OrderInfoRepository;
 
 @Service

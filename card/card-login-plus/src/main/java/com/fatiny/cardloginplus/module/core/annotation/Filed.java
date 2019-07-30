@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.module.annotation;
+package com.fatiny.cardloginplus.module.core.annotation;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;

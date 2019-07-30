@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fatiny.cardloginplus.domain.entity.Account;
-import com.fatiny.cardloginplus.module.base.AbstractLoginParam;
+import com.fatiny.cardloginplus.module.core.base.AbstractLoginParam;
 import com.fatiny.cardloginplus.repository.AccountRepository;
 import com.fatiny.cardloginplus.util.MD5;
 

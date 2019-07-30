@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.module.result;
+package com.fatiny.cardloginplus.module.core.result;
 
 /**
  * 返回前端接口类, 对于错误码, 每次只生成一条, 如果给予状态的改变即可

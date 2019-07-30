@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.module.annotation;
+package com.fatiny.cardloginplus.module.core.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.fatiny.cardloginplus.module.base.PreOrderParam;
+import com.fatiny.cardloginplus.module.core.base.PreOrderParam;
 
 
 @Target(ElementType.TYPE)

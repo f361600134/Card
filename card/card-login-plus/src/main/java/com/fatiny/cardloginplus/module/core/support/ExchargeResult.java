@@ -1,8 +1,8 @@
-package com.fatiny.cardloginplus.module.result.support;
+package com.fatiny.cardloginplus.module.core.support;
 
-import com.fatiny.cardloginplus.module.result.ErrorCodeEnum;
-import com.fatiny.cardloginplus.module.result.ErrorResult;
-import com.fatiny.cardloginplus.module.result.IResult;
+import com.fatiny.cardloginplus.module.core.result.ErrorCodeEnum;
+import com.fatiny.cardloginplus.module.core.result.ErrorResult;
+import com.fatiny.cardloginplus.module.core.result.IResult;
 
 /**
  * 支付的的结果集对象, 用于支付的结果返回集.

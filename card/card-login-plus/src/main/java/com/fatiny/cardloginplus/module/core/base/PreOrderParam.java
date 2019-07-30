@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.module.base;
+package com.fatiny.cardloginplus.module.core.base;
 
 /**
  * 创建订单参数, 游戏客户端和服务器使用, 前端必要参数

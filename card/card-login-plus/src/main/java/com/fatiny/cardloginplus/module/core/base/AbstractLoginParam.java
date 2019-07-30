@@ -1,8 +1,8 @@
-package com.fatiny.cardloginplus.module.base;
+package com.fatiny.cardloginplus.module.core.base;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.fatiny.cardloginplus.module.annotation.Filed;
+import com.fatiny.cardloginplus.module.core.annotation.Filed;
 
 /**
  * 抽出公共参数 参数抽象类

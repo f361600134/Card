@@ -117,6 +117,12 @@
 		    <version>1.9.3</version>
 		</dependency>
 		
+		<!--httpclient -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		</dependency>
+		
 		
 	</dependencies>
 

@@ -27,7 +27,6 @@ public class TaskExecutePool {
 	public Executor taskAsyncPool() {
 		int cpuNums = Runtime.getRuntime().availableProcessors();
 		int nThreads = (cpuNums * 2);
-
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
 		executor.setCorePoolSize(nThreads);
 		executor.setMaxPoolSize(config.getMaximumPoolSize());
