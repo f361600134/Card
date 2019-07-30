@@ -1,15 +1,22 @@
 package com.fatiny.cardloginplus.domain.entity;
 
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "channel_server")
 public class ChannelServer {
 	
-	@EmbeddedId
+	@Id
+	@Column
+	private Integer id;
+	
+	//@EmbeddedId
 	@Column(name = "channel")
     private Integer channel;
 

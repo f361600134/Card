@@ -1,8 +1,6 @@
 package com.fatiny.cardloginplus.module.core.support;
 
-import com.fatiny.cardloginplus.module.core.result.ErrorCodeEnum;
-import com.fatiny.cardloginplus.module.core.result.ErrorResult;
-import com.fatiny.cardloginplus.module.core.result.IResult;
+import com.fatiny.cardloginplus.common.result.IResult;
 
 /**
  * 支付的的结果集对象, 用于支付的结果返回集.
@@ -37,7 +35,6 @@ public class ExchargeResult extends ErrorResult {
 	}
 
 	/**
-	 * 
 	 * @param codeEnum
 	 * @param result 支持自定义结果
 	 * @return  

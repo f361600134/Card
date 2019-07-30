@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.fatiny.cardloginplus.module.core.result.IResult;
+import com.fatiny.cardloginplus.common.result.IResult;
 
 public interface IController {
 

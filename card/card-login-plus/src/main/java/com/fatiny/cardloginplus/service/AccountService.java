@@ -25,7 +25,7 @@ public class AccountService {
 	
 	/**
 	 * 创建全平台唯一的账号
-	 * 生成规则:Md5(ch+sdkUserId+sdkUserName)
+	 * 生成规则:Md5(ch+ChannelUId+ChannelUname)
 	 * @return  
 	 * @return String  
 	 * @date 2019年5月14日下午5:58:47

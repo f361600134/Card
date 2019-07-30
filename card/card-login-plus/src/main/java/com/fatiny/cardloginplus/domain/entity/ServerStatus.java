@@ -1,7 +1,5 @@
 package com.fatiny.cardloginplus.domain.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,10 +22,10 @@ public class ServerStatus{
 	@Column(name = "showId")
     private Integer showId;
 
-	@Column(name = "ip")
+	@Column(name = "ip",length = 1<<5)
     private String ip;
 
-	@Column(name = "innerIp")
+	@Column(name = "innerIp",length = 1<<5)
     private String innerIp;
 
 	@Column(name = "port")

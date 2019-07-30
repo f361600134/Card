@@ -1,11 +1,13 @@
-package com.fatiny.cardloginplus.module.core.result;
+package com.fatiny.cardloginplus.module.core.support;
+
+import com.fatiny.cardloginplus.common.result.CodeEnum;
 
 /**
  * 验证错误码
  * @auth Jeremy
  * @date 2019年4月28日下午2:57:59
  */
-public enum ErrorCodeEnum {
+public enum ErrorCodeEnum implements CodeEnum{
 
 	SUCCESS(1, "success"),
 	ERROR_USERNAME_LEN(2, "用户名必须是5位以上的字母或数字"),
@@ -38,8 +40,7 @@ public enum ErrorCodeEnum {
 	}
 
 	/**
-	 * 获取到订单枚举
-	 * 
+	 * 获取到指定状态枚举
 	 * @param status
 	 * @return
 	 * @return PayOrderStatusEnum

@@ -5,14 +5,18 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "account")
 public class Account{
 	
+	@Id
+	@Column(name = "id")
+	private Integer id;
+	
 	// 用户id
-	@EmbeddedId
 	@Column(name = "userName")
     private String userName;
 

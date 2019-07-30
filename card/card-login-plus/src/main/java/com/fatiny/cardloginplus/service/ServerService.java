@@ -4,8 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +14,11 @@ import com.fatiny.cardloginplus.repository.ServerStatusRepository;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class ServerService {
-	
-	public final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private ServerStatusRepository serverStatusRepository;
@@ -35,6 +34,12 @@ public class ServerService {
 	
 	//channelId-->recommand serverId
 	private Map<Integer, Integer> channelRecommandServers = Maps.newHashMap();
+	
+	public void init()
+	{
+		reloadServers();
+		reloadChannelServers();
+	}
 	
 	/**
 	 * 更新服务器
@@ -146,6 +151,7 @@ public class ServerService {
 		servers.clear();
 		Iterable<ServerStatus> rets = serverStatusRepository.findAll();
 		rets.forEach(ret -> servers.put(ret.getId(), ret));
+		log.info("reloadServers, servers:{}", servers);
 	}
 	
 	/**
@@ -170,16 +176,17 @@ public class ServerService {
 		ServerStatus server = servers.get(chserver.getServerid());
 		if(server==null)
 		{
-			logger.error("not found server for channel: {}", chserver.getChannel());
+			log.error("not found server for channel: {}", chserver.getChannel());
 			return;
 		}
 //		else if(server.getIsTest() && chserver.getChannel() != Config.CHANNEL_BUSINESS)
 //			return;		//测试服务器不能对外
 		
 		channelservers.add(server);
-		logger.info("reload channel server from db: {}", chserver);
-
+		log.info("reload channel server from db: {}", chserver);
 		lookupChannelRecommand(chserver.getChannel(), chserver.getServerid());
+		
+		log.info("reloadChannelServers, channelservers:{}", channelservers);
 	}
 	
 	private void lookupChannelRecommand(int channel, int serverId)
@@ -188,7 +195,7 @@ public class ServerService {
 		if(server.getIsRecommand())
 		{
 			channelRecommandServers.put(channel, serverId);
-			logger.info("lookup default recommand server {} for channel: {}", serverId, channel);
+			log.info("lookup default recommand server {} for channel: {}", serverId, channel);
 		}
 	}
 	

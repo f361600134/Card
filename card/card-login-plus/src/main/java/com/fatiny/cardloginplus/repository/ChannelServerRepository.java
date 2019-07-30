@@ -13,7 +13,7 @@ import com.fatiny.cardloginplus.domain.entity.ChannelServer;
 @Qualifier(value = "channelServerRepository")
 public interface ChannelServerRepository extends JpaRepository<ChannelServer, Integer> {
 	
-	@Query(value="select * from server_status order by channel, serverId", nativeQuery=true)
+	@Query(value="select * from channel_server order by channel, server_id", nativeQuery=true)
 	List<ChannelServer> selectByOrder();
 	
 }

@@ -1,4 +1,4 @@
-package com.fatiny.cardloginplus.module.core.result;
+package com.fatiny.cardloginplus.module.core.support;
 
 /**
  * 不同渠道充值返回结果定义不同 有些渠道(youxifan)0表示成功, 有些(quick)1表示成功. 这里定义所有渠道需要的返回值类型

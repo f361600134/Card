@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fatiny.cardloginplus.common.result.IResult;
 import com.fatiny.cardloginplus.domain.entity.OrderInfo;
 import com.fatiny.cardloginplus.module.core.AbstractController;
 import com.fatiny.cardloginplus.module.core.annotation.ParameterMapping;
 import com.fatiny.cardloginplus.module.core.base.IExchargeParam;
-import com.fatiny.cardloginplus.module.core.result.ErrorCodeEnum;
-import com.fatiny.cardloginplus.module.core.result.IResult;
-import com.fatiny.cardloginplus.module.core.result.ResultCode;
 import com.fatiny.cardloginplus.module.core.support.AuthResult;
+import com.fatiny.cardloginplus.module.core.support.ErrorCodeEnum;
 import com.fatiny.cardloginplus.module.core.support.ExchargeResult;
+import com.fatiny.cardloginplus.module.core.support.ResultCode;
 import com.fatiny.cardloginplus.util.HttpClientUtil;
 import com.google.common.collect.Maps;
 

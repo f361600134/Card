@@ -1,11 +1,9 @@
 package com.fatiny.cardloginplus.module.core.support;
 
+import com.fatiny.cardloginplus.common.result.IResult;
 import com.fatiny.cardloginplus.domain.entity.ServerStatus;
-import com.fatiny.cardloginplus.module.core.result.ErrorCodeEnum;
-import com.fatiny.cardloginplus.module.core.result.ErrorResult;
-import com.fatiny.cardloginplus.module.core.result.IResult;
 
-public class AuthResult extends ErrorResult{
+public class AuthResult extends ErrorResult {
 	//成功
 	private String username;//数据库账号,生成的唯一标识name
 	private String name;	//服务器名
@@ -200,5 +198,4 @@ public class AuthResult extends ErrorResult{
 	public void setLoginSid(Integer loginSid) {
 		this.loginSid = loginSid;
 	}
-	
 }

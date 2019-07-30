@@ -15,6 +15,7 @@ import com.fatiny.cardloginplus.repository.ActorInfoRepository;
 import com.fatiny.cardloginplus.repository.ServerStatusRepository;
 
 @RestController
+@RequestMapping("/hello")
 public class HelloWorldController {
 	
 	@Autowired
