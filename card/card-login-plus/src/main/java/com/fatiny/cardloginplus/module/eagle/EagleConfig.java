@@ -23,11 +23,7 @@ import com.fatiny.cardloginplus.util.MD5;
  */
 public class EagleConfig {
 	
-//	public static String EagAppId = "466";
-//	public static String EagleAppKey = "3c6b70303cd44782acb3a463054b0218";
-	public static String EagleAppsecret = "dc65585ffedc490eaad285145e24e669";
-//	public static String EagleChannelid = "310402444";
-//	public static String EagleBuglyAppid = "1b4ebb361b";
+	public static String EagleAppsecret = "xxx";
 	
 	/**
 	 * Eagle Sdk
