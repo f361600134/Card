@@ -8,8 +8,6 @@ import io.netty.channel.socket.DatagramChannel;
 
 /**
  * 玩家会话信息
- * 
- * @author huachp
  */
 public class GameSession {
 	

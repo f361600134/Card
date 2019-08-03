@@ -2,9 +2,6 @@ package com.fatiny.core.data;
 
 import java.io.Serializable;
 
-/**
- * @author huachp
- */
 public abstract class BasePo implements Serializable {
 
 	/**
