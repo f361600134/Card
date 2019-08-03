@@ -35,6 +35,10 @@ public class ActorInfo {
 
 	@Column(name = "serverId")
     private Integer serverId;
+	
+	public ActorInfo() {
+		this.lastUpdate = new Date();
+	}
 
 //    private static final long serialVersionUID = 1L;
 //

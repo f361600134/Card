@@ -1,10 +1,12 @@
 package com.fatiny.cardloginplus.service;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 
 import com.fatiny.cardloginplus.domain.entity.ChannelServer;
@@ -18,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class ServerService {
+public class ServerService implements CommandLineRunner {
 	
 	@Autowired
 	private ServerStatusRepository serverStatusRepository;
@@ -242,5 +244,19 @@ public class ServerService {
 		if(recommand==null)
 			return null;
 		return this.servers.get(recommand);
+	}
+	
+	
+	public Collection<ServerStatus> getAllServerList(){
+		return this.servers.values();
+	}
+	
+	public Map<Integer, List<ServerStatus>> getAllChannelServer(){
+		return this.channelServers;
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		init();
 	}
 }

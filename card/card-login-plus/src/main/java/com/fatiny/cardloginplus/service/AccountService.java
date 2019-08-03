@@ -3,6 +3,7 @@ package com.fatiny.cardloginplus.service;
 import java.util.Date;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -14,6 +15,8 @@ import com.fatiny.cardloginplus.domain.entity.Account;
 import com.fatiny.cardloginplus.module.core.base.AbstractLoginParam;
 import com.fatiny.cardloginplus.repository.AccountRepository;
 import com.fatiny.cardloginplus.util.MD5;
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 
 @Service
 public class AccountService {
@@ -22,6 +25,20 @@ public class AccountService {
 	
 	@Autowired
 	private AccountRepository accountRepository;
+	
+	/**
+	 * 缓存数据, 定时清除
+	 * username 为key, 不通阶段更新成不同的信息
+	 * 登陆: username-> seesionKey
+	 * 验证: username-> Account
+	 * 此时, 如果再次获取username 则会报错
+	 */
+	Cache<String, String> cache = CacheBuilder.newBuilder()
+			.expireAfterAccess(5, TimeUnit.SECONDS)// 在给定时间内没有被读/写访问,则清除
+			.maximumSize(100)// 最大容量
+			.concurrencyLevel(5) //并发等级
+			.initialCapacity(20)//初始容量
+			.build();
 	
 	/**
 	 * 创建全平台唯一的账号
@@ -116,6 +133,7 @@ public class AccountService {
 	public boolean updateAccount(final Account account)
 	{
 		Account ret = this.accountRepository.save(account);
+		//cache.put(account.getUserName(), account);
 		return ret != null;
 	}
 	
@@ -139,6 +157,7 @@ public class AccountService {
 	public String createSessionKey(String username)
 	{
 		String sessionKey = createSessionKey();
+		cache.put(username, sessionKey);
 		return sessionKey;
 	}
 	
@@ -153,6 +172,16 @@ public class AccountService {
         //32位UUID
 		 String uuid = UUID.randomUUID().toString().replace("-", "");
 		 return uuid.substring(22);
+	}
+	
+	/**
+	 * 创建sessionKey
+	 * @return  
+	 * @return String  
+	 * @date 2019年5月14日下午5:57:14
+	 */
+	public String getSessionKey(String username){
+		return cache.getIfPresent(username);
 	}
 	
 }

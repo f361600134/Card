@@ -34,9 +34,12 @@ import com.fatiny.cardloginplus.service.OrderService;
 import com.fatiny.cardloginplus.service.ServerService;
 import com.fatiny.cardloginplus.util.CommonUtil;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public abstract class AbstractController implements IController {
 
-	public final Logger logger = LoggerFactory.getLogger(this.getClass());
+	//public final Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Resource
 	protected AccountService accountService;
@@ -59,7 +62,7 @@ public abstract class AbstractController implements IController {
 	public IResult login(HttpServletRequest request, HttpServletResponse response){
 		ParameterMapping parameterMapping = this.getClass().getAnnotation(ParameterMapping.class);
 		if (parameterMapping == null || parameterMapping.loginParam() == null) {
-			logger.info("登录参数配置为空, 请检查是否配置[@AuthChannel]注解");
+			log.info("登录参数配置为空, 请检查是否配置[@AuthChannel]注解");
 			return AuthResult.build(ErrorCodeEnum.IllEGAL_PARAMS);
 		}
 		try {
@@ -71,7 +74,7 @@ public abstract class AbstractController implements IController {
 			}
 			result = sdkLogin(loginParam);
 			if (!result.success()) {
-				logger.info("sdk校验出错, loginParam:{}", request.getParameterMap());
+				log.info("sdk校验出错, loginParam:{}", request.getParameterMap());
 				return result;
 			}
 			//校验参数成功, 获取角色信息
@@ -83,12 +86,12 @@ public abstract class AbstractController implements IController {
 				account= accountService.createAccount(absloginParam, userName);
 				if(account==null)
 				{
-					logger.error("create account error! userName={}, sdkUserName={}, os={}, ch={}",
+					log.error("create account error! userName={}, sdkUserName={}, os={}, ch={}",
 							userName, absloginParam.getChannelUname(), absloginParam.getOs(), absloginParam.getCh());
 					return AuthResult.build(ErrorCodeEnum.ERROR_ACCOUNT);
 				}
 			}
-			logger.info("userName:{}, account:{}", userName, (account == null));
+			log.info("userName:{}, account:{}", userName, (account == null));
 			//认证成功
 			if(account.getIsBan()){
 				return AuthResult.build(ErrorCodeEnum.ERROR_BAN);
@@ -102,10 +105,10 @@ public abstract class AbstractController implements IController {
 				server = this.serverService.getRecommandServer(absloginParam.getCh());
 			//构建成功消息
 			result = AuthResult.success(absloginParam.getInputUname(), userName, sskey, server);
-			logger.info("login result:{}", JSON.toJSON(result));
+			log.info("login result:{}", JSON.toJSON(result));
 			return result;
 		} catch (Exception e) {
-			logger.error("解析配置失败", e);
+			log.error("解析配置失败", e);
 			return AuthResult.build(ErrorCodeEnum.ERROR_RUNNING);
 		}
 	}
@@ -113,7 +116,7 @@ public abstract class AbstractController implements IController {
 	public IResult createOrder(HttpServletRequest request, HttpServletResponse response) {
 		ParameterMapping parameterMapping = this.getClass().getAnnotation(ParameterMapping.class);
 		if (parameterMapping == null) {
-			logger.info("登录参数配置为空, 请检查是否配置[@ParameterMapping]注解");
+			log.info("登录参数配置为空, 请检查是否配置[@ParameterMapping]注解");
 			return OrderResult.build(ErrorCodeEnum.ERROR_RUNNING);
 		}
 		try {
@@ -130,7 +133,7 @@ public abstract class AbstractController implements IController {
 				return OrderResult.build(ErrorCodeEnum.IllEGAL_PARAMS);
 			}
 		} catch (Exception e) {
-			logger.error("创建订单出错:{}", e);
+			log.error("创建订单出错:{}", e);
 			return OrderResult.build(ErrorCodeEnum.ERROR_ORDER_CREATE);
 		}
 	}
@@ -264,20 +267,20 @@ public abstract class AbstractController implements IController {
 	}
 
 	public void info(String infoMsg, Object... params) {
-		if (logger.isInfoEnabled()) {
-			logger.info(infoMsg, params);
+		if (log.isInfoEnabled()) {
+			log.info(infoMsg, params);
 		}
 	}
 
 	public void error(String infoMsg, Object... params) {
-		if (logger.isErrorEnabled()) {
-			logger.error(infoMsg, params);
+		if (log.isErrorEnabled()) {
+			log.error(infoMsg, params);
 		}
 	}
 
 	public void debug(String infoMsg, Object... params) {
-		if (logger.isDebugEnabled()) {
-			logger.debug(infoMsg, params);
+		if (log.isDebugEnabled()) {
+			log.debug(infoMsg, params);
 		}
 	}
 
