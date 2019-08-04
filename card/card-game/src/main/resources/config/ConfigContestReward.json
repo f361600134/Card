@@ -1,0 +1,17 @@
+[
+{ "ID":1, "ranking":1, "type":1, "rankingAward":[[112,10000],[42001,1000],[101,500]], "admissionAward":[[112,1100]] },
+{ "ID":2, "ranking":2, "type":1, "rankingAward":[[112,8000],[42001,800]], "admissionAward":[[112,1000]] },
+{ "ID":3, "ranking":3, "type":1, "rankingAward":[[112,7500],[42001,750]], "admissionAward":[[112,900]] },
+{ "ID":4, "ranking":10, "type":1, "rankingAward":[[112,7000],[42001,700]], "admissionAward":[[112,800]] },
+{ "ID":5, "ranking":20, "type":1, "rankingAward":[[112,6500],[42001,650]], "admissionAward":[[112,700]] },
+{ "ID":6, "ranking":32, "type":1, "rankingAward":[[112,6000],[42001,600]], "admissionAward":[[112,600]] },
+{ "ID":7, "ranking":1, "type":2, "rankingAward":[[112,5000],[42001,500]], "admissionAward":[[112,900]] },
+{ "ID":8, "ranking":2, "type":2, "rankingAward":[[112,4800],[42001,480]], "admissionAward":[[112,800]] },
+{ "ID":9, "ranking":3, "type":2, "rankingAward":[[112,4600],[42001,460]], "admissionAward":[[112,700]] },
+{ "ID":10, "ranking":10, "type":2, "rankingAward":[[112,4000],[42001,400]], "admissionAward":[[112,600]] },
+{ "ID":11, "ranking":20, "type":2, "rankingAward":[[112,3800],[42001,380]], "admissionAward":[[112,500]] },
+{ "ID":12, "ranking":50, "type":2, "rankingAward":[[112,3600],[42001,360]], "admissionAward":[[112,400]] },
+{ "ID":13, "ranking":100, "type":2, "rankingAward":[[112,3200],[42001,320]], "admissionAward":[[112,300]] },
+{ "ID":14, "ranking":500, "type":2, "rankingAward":[[112,3000],[42001,300]], "admissionAward":[[112,200]] },
+{ "ID":15, "ranking":1000, "type":2, "rankingAward":[[112,2500],[42001,250]], "admissionAward":[[112,100]] },
+{ "ID":16, "ranking":999999, "type":2, "rankingAward":[[112,2000],[42001,200]], "admissionAward":[[112,50]] }]

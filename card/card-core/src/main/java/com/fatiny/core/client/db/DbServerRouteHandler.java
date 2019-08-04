@@ -4,16 +4,16 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.fatiny.core.util.GameLog;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 数据服路由分配处理器
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerRouteHandler {
 
 	/** 数据服客户端 */
@@ -77,7 +77,7 @@ public class DbServerRouteHandler {
 			}
 			return serverInfo;
 		} catch (Exception e) {
-			GameLog.error("数据服路线分配出错:{}", id, e);
+			log.error("数据服路线分配出错:{}", id, e);
 			return null;	
 		}
 	}
@@ -99,7 +99,7 @@ public class DbServerRouteHandler {
 				}
 			}
 		} catch (Exception e) {
-			GameLog.error("重新分配数据服路线出错:{}", id, e);
+			log.error("重新分配数据服路线出错:{}", id, e);
 		}
 		return null;
 	}

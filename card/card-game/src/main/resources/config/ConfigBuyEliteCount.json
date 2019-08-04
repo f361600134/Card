@@ -1,0 +1,16 @@
+[
+{ "ID":1, "needIngot":20 },
+{ "ID":2, "needIngot":30 },
+{ "ID":3, "needIngot":40 },
+{ "ID":4, "needIngot":60 },
+{ "ID":5, "needIngot":80 },
+{ "ID":6, "needIngot":100 },
+{ "ID":7, "needIngot":120 },
+{ "ID":8, "needIngot":140 },
+{ "ID":9, "needIngot":160 },
+{ "ID":10, "needIngot":180 },
+{ "ID":11, "needIngot":200 },
+{ "ID":12, "needIngot":220 },
+{ "ID":13, "needIngot":240 },
+{ "ID":14, "needIngot":260 },
+{ "ID":15, "needIngot":280 }]

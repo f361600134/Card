@@ -9,15 +9,14 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import com.fatiny.core.akka.remote.ActorMessage;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 心跳检测线程
- * 
- * @author huachp
  */
+@Slf4j
 public class ActorDetectionHander {
 	
 	static final long HEART_BEAT_INTERVAL = 3500L; // 心跳间隔时间
@@ -115,7 +114,7 @@ public class ActorDetectionHander {
 					serverInfo.getChannel().writeAndFlush(heartbeatMsg);
 				}
 			} catch (Exception e) {
-				GameLog.error("actor服务心跳检测异常", e);
+				log.error("actor服务心跳检测异常", e);
 			}
 		}
 		

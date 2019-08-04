@@ -3,15 +3,16 @@ package com.fatiny.core.client.actor;
 import java.lang.reflect.Method;
 
 import com.fatiny.core.akka.remote.RemoteMethodCall;
-import com.fatiny.core.util.GameLog;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.TypedActor.MethodCall;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 通信Actor 
  */
+@Slf4j
 public class CorrespondActor extends AbstractActor {
 	
 	private int actorId;
@@ -55,7 +56,7 @@ public class CorrespondActor extends AbstractActor {
 				.match(CallbackTask.class, callbackMsg -> {
 					callbackMsg.execute();
 				})
-				.matchAny(t->GameLog.error("收到不合法的消息:{}", t))
+				.matchAny(t->log.error("收到不合法的消息:{}", t))
 				.build();
 	}
 	

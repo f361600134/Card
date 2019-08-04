@@ -8,7 +8,6 @@ import com.fatiny.core.net.GameProtocolEncoder;
 import com.fatiny.core.net.IServerHandler;
 import com.fatiny.core.net.IdleDetectionHandler;
 import com.fatiny.core.server.main.iohandler.MainServerHandler;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -21,12 +20,12 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 游戏服主服务
- * 
- * @author huachp
  */
+@Slf4j
 public class MainServer extends AbstractServer {
 	
 	private IStartup startup;
@@ -47,7 +46,7 @@ public class MainServer extends AbstractServer {
 			serverHandler = startup.startup();
 			connectionIdleTime = config.getConnectionIdleTime();
 		} catch (Exception e) {
-			GameLog.error("", e);
+			log.error("", e);
 			throw new RuntimeException("启动过程出现异常, 服务器关闭, 请检查配置");
 		}
 	}
@@ -89,9 +88,9 @@ public class MainServer extends AbstractServer {
 			
 			bootstrap.bind(port).sync();
 			// log
-			GameLog.info("逻辑服启动成功, 绑定0.0.0.0, port:{}, 指定ip:{}", port, ip);
+			log.info("逻辑服启动成功, 绑定0.0.0.0, port:{}, 指定ip:{}", port, ip);
 		} catch (Exception e) {
-			GameLog.info("", e);
+			log.info("", e);
 			throw new RuntimeException("Netty启动出现异常, 服务器关闭, 请检查");
 		}
 		

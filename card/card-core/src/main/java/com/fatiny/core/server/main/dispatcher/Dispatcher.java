@@ -6,9 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.fatiny.core.server.main.GameSession;
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.MessageOutput;
 import com.google.protobuf.GeneratedMessageLite;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Dispatcher
@@ -18,10 +19,9 @@ import com.google.protobuf.GeneratedMessageLite;
  * &#064;Cmd(id=xx)
  * public void xxx(GameSession session, ProtobufObj params) {...}
  * </pre>
- *
- * @author huachp
  * 
  */
+@Slf4j
 public class Dispatcher {
 
 	private Map<Short, Commander> commanders = new HashMap<>();
@@ -48,7 +48,7 @@ public class Dispatcher {
 					}
 				}
 			} catch (Exception e) {
-				GameLog.error("协议加载过程出现异常", e);
+				log.error("协议加载过程出现异常", e);
 			}
 		}
 
@@ -73,18 +73,18 @@ public class Dispatcher {
 			
 			GeneratedMessageLite params = (GeneratedMessageLite) parser.invoke(null, bytes);
 			
-			GameLog.debug("收到协议[{}], pid={}, params={}, size={}B",
+			log.debug("收到协议[{}], pid={}, params={}, size={}B",
 					cmd, session.getPlayerId(), MessageOutput.create(params), bytes.length);
 
 			commander.method.invoke(commander.o, session, params);
 
 			long used = System.currentTimeMillis() - begin;
 
-			GameLog.debug("协议[{}]处理完成，耗时{}ms", cmd, used);
+			log.debug("协议[{}]处理完成，耗时{}ms", cmd, used);
 
 			// 协议处理超过1秒
 			if (used > 1000) {
-				GameLog.error("协议[{}]处理慢!!!耗时{}ms", cmd, used);
+				log.error("协议[{}]处理慢!!!耗时{}ms", cmd, used);
 			}
 
 		}

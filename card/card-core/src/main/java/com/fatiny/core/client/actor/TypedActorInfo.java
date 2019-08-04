@@ -6,13 +6,13 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.fatiny.core.util.CRC32HashUtil;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * typed actor 反射信息
- * 
- * @author huachp
  */
+@Slf4j
 public class TypedActorInfo {
 
 	private Class<?> typedActorCls;
@@ -40,7 +40,7 @@ public class TypedActorInfo {
 			Arrays.sort(actorInfo.methodInfos);
 			return actorInfo;
 		} catch (Exception e) {
-			GameLog.error("初始化TypedActor Method异常, {}", typedActorCls);
+			log.error("初始化TypedActor Method异常, {}", typedActorCls);
 			return null;
 		}
 	}

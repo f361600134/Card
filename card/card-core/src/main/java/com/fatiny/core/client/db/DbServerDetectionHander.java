@@ -9,15 +9,14 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import com.fatiny.core.server.db.message.DbServerMsg;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据服检测线程
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerDetectionHander {
 	
 	static final long HEART_BEAT_INTERVAL = 3500L; // 心跳间隔时间
@@ -115,7 +114,7 @@ public class DbServerDetectionHander {
 					serverInfo.getChannel().writeAndFlush(DbServerMsg.HEARTBEAT);
 				}
 			} catch (Exception e) {
-				GameLog.error("数据服心跳检测异常", e);
+				log.error("数据服心跳检测异常", e);
 			}
 		}
 		

@@ -1,0 +1,13 @@
+[
+{ "ID":10001, "name":"前排兵力", "icon":"Technology/10001", "openBarrackLv":1, "position":1 },
+{ "ID":10002, "name":"前排攻击", "icon":"Technology/10002", "openBarrackLv":20, "position":1 },
+{ "ID":10003, "name":"前排双防", "icon":"Technology/10003", "openBarrackLv":5, "position":1 },
+{ "ID":10004, "name":"前排闪躲", "icon":"Technology/10004", "openBarrackLv":10, "position":1 },
+{ "ID":10005, "name":"中排兵力", "icon":"Technology/10005", "openBarrackLv":10, "position":2 },
+{ "ID":10006, "name":"中排攻击", "icon":"Technology/10006", "openBarrackLv":15, "position":2 },
+{ "ID":10007, "name":"中排双防", "icon":"Technology/10007", "openBarrackLv":20, "position":2 },
+{ "ID":10008, "name":"中排暴击", "icon":"Technology/10008", "openBarrackLv":15, "position":2 },
+{ "ID":10009, "name":"后排兵力", "icon":"Technology/10009", "openBarrackLv":20, "position":3 },
+{ "ID":10010, "name":"后排攻击", "icon":"Technology/10010", "openBarrackLv":1, "position":3 },
+{ "ID":10011, "name":"后排双防", "icon":"Technology/10011", "openBarrackLv":10, "position":3 },
+{ "ID":10012, "name":"后排破击", "icon":"Technology/10012", "openBarrackLv":20, "position":3 }]

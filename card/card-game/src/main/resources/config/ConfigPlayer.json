@@ -1,0 +1,3 @@
+[
+{ "ID":108, "sex":1, "bodyImg":"Role/CJ_nlh", "animation":"res/10029", "headIcon":"Role/5001_108", "initLevel":1, "initVIP":0, "initExp":0, "initCE":0, "initPower":150, "initDiamond":0, "initGold":500, "initMineral":500, "rageMax":300 },
+{ "ID":109, "sex":2, "bodyImg":"Role/CJ_llh", "animation":"res/10029", "headIcon":"Role/5001_109", "initLevel":1, "initVIP":0, "initExp":0, "initCE":0, "initPower":150, "initDiamond":0, "initGold":500, "initMineral":500, "rageMax":300 }]

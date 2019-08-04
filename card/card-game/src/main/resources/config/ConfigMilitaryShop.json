@@ -1,0 +1,14 @@
+[
+{ "ID":1, "itemId":42001, "name":"武将升星丹", "count":10, "currency":112, "amount":100, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":2, "itemId":42001, "name":"武将升星丹", "count":50, "currency":112, "amount":500, "upLimit":1, "weight":1000, "sale":1 },
+{ "ID":3, "itemId":42001, "name":"武将升星丹", "count":100, "currency":112, "amount":1000, "upLimit":1, "weight":1000, "sale":1 },
+{ "ID":4, "itemId":61032, "name":"刘备碎片", "count":1, "currency":112, "amount":300, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":5, "itemId":61039, "name":"诸葛亮碎片", "count":1, "currency":112, "amount":300, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":6, "itemId":80107, "name":"紫色装备碎片宝箱", "count":1, "currency":112, "amount":240, "upLimit":1, "weight":1000, "sale":1 },
+{ "ID":7, "itemId":80421, "name":"中级宝石袋", "count":1, "currency":112, "amount":240, "upLimit":1, "weight":1000, "sale":1 },
+{ "ID":8, "itemId":62201, "name":"狮心战刀碎片", "count":4, "currency":112, "amount":400, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":9, "itemId":62202, "name":"狮心项链碎片", "count":4, "currency":112, "amount":400, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":10, "itemId":62203, "name":"狮心战盔碎片", "count":4, "currency":112, "amount":400, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":11, "itemId":62204, "name":"狮心战甲碎片", "count":4, "currency":112, "amount":400, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":12, "itemId":62205, "name":"狮心腰带碎片", "count":4, "currency":112, "amount":400, "upLimit":5, "weight":1000, "sale":1 },
+{ "ID":13, "itemId":62206, "name":"狮心战靴碎片", "count":4, "currency":112, "amount":400, "upLimit":5, "weight":1000, "sale":1 }]

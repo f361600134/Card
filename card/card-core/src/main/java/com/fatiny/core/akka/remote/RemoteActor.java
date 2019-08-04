@@ -1,14 +1,14 @@
 package com.fatiny.core.akka.remote;
 
-import com.fatiny.core.util.GameLog;
-
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.TypedActor.MethodCall;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 远程actor消息处理
  */
+@Slf4j
 public class RemoteActor extends AbstractActor {
 	
 	private TypedActorMethods actorMethods;
@@ -31,7 +31,7 @@ public class RemoteActor extends AbstractActor {
 					Object rs = methodCall.apply(actorMethods.typedActorObj());
 					getSender().tell(rs, ActorRef.noSender());
 				})
-				.matchAny(t->GameLog.error("收到不合法的消息:{}", t))
+				.matchAny(t->log.error("收到不合法的消息:{}", t))
 				.build();
 	}
 

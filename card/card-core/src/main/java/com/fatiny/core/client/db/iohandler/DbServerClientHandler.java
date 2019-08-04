@@ -8,16 +8,15 @@ import java.util.concurrent.Executors;
 import com.fatiny.core.client.db.DbServerDetectionHander;
 import com.fatiny.core.client.db.DbServerMsgHandler;
 import com.fatiny.core.server.db.message.DbServerMsg;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据服客户端消息处理器
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerClientHandler extends SimpleChannelInboundHandler<Object> {
 	
 	private DbServerMsgHandler msgHandler;
@@ -38,7 +37,7 @@ public class DbServerClientHandler extends SimpleChannelInboundHandler<Object> {
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		GameLog.info("检测到数据服连接断开:{}", ctx.channel().remoteAddress());
+		log.info("检测到数据服连接断开:{}", ctx.channel().remoteAddress());
 	}
 	
 
@@ -51,7 +50,7 @@ public class DbServerClientHandler extends SimpleChannelInboundHandler<Object> {
 			return;
 		}
 		if (!(msg instanceof DbServerMsg)) {
-			GameLog.error("收到不合法的消息:{}", msg);
+			log.error("收到不合法的消息:{}", msg);
 			return;
 		}
 		service.execute(new Runnable() {
@@ -68,7 +67,7 @@ public class DbServerClientHandler extends SimpleChannelInboundHandler<Object> {
 		if (cause instanceof IOException) {
 			return;
 		} else {
-			GameLog.error("数据服客户端通信异常", cause);
+			log.error("数据服客户端通信异常", cause);
 		}
 	}
 	

@@ -1,0 +1,14 @@
+[
+{ "ID":1001, "name":"国战之星", "icon":"Hero/GodIcon/3", "desc":"上阵时在国战中主动战斗次数(<color=#a80000>{0}</color>/{1})", "functionId":0, "completeType":1, "completeValue":[0], "completeTotal":15, "isOpen":1 },
+{ "ID":1002, "name":"再战无双", "icon":"Hero/GodIcon/4", "desc":"上阵时完成再战无双战斗(<color=#a80000>{0}</color>/{1})", "functionId":3604, "completeType":2, "completeValue":[0], "completeTotal":2, "isOpen":1 },
+{ "ID":1003, "name":"将魂试炼", "icon":"Hero/GodIcon/5", "desc":"上阵时完成将魂副本(<color=#a80000>{0}</color>/{1})", "functionId":3603, "completeType":3, "completeValue":[0], "completeTotal":2, "isOpen":1 },
+{ "ID":1004, "name":"擂台争锋", "icon":"Hero/GodIcon/6", "desc":"上阵时在比武擂台中完成战斗(<color=#a80000>{0}</color>/{1})", "functionId":1100, "completeType":4, "completeValue":[0], "completeTotal":8, "isOpen":1 },
+{ "ID":1005, "name":"抢夺军资", "icon":"Hero/GodIcon/7", "desc":"上阵时完成抢夺军资战斗(<color=#a80000>{0}</color>/{1})", "functionId":0, "completeType":5, "completeValue":[0], "completeTotal":1, "isOpen":1 },
+{ "ID":1006, "name":"皇城", "icon":"Hero/GodIcon/8", "desc":"上阵时在皇城中获胜(<color=#a80000>{0}</color>/{1})", "functionId":1000, "completeType":6, "completeValue":[1], "completeTotal":3, "isOpen":1 },
+{ "ID":1007, "name":"通关宝石副本", "icon":"Hero/GodIcon/9", "desc":"上阵通关宝石副本炼狱难度(<color=#a80000>{0}</color>/{1})", "functionId":3601, "completeType":7, "completeValue":[19,20,21,22,23,24], "completeTotal":1, "isOpen":1 },
+{ "ID":1008, "name":"通关装备副本", "icon":"Hero/GodIcon/10", "desc":"上阵通关装备副本虎烈难度(<color=#a80000>{0}</color>/{1})", "functionId":3602, "completeType":8, "completeValue":[13,14,15,16,17,18], "completeTotal":1, "isOpen":1 },
+{ "ID":1009, "name":"通关精英副本", "icon":"Hero/GodIcon/11", "desc":"上阵通关精英战役第6章-黄月英(<color=#a80000>{0}</color>/{1})", "functionId":3802, "completeType":9, "completeValue":[6105], "completeTotal":1, "isOpen":1 },
+{ "ID":1010, "name":"通关精英副本", "icon":"Hero/GodIcon/11", "desc":"上阵通关精英战役第7章-祝融(<color=#a80000>{0}</color>/{1})", "functionId":3802, "completeType":9, "completeValue":[7103], "completeTotal":1, "isOpen":1 },
+{ "ID":1011, "name":"通关精英副本", "icon":"Hero/GodIcon/11", "desc":"上阵通关精英战役第8章-贾诩(<color=#a80000>{0}</color>/{1})", "functionId":3802, "completeType":9, "completeValue":[8101], "completeTotal":1, "isOpen":1 },
+{ "ID":1012, "name":"培养天赋", "icon":"Hero/GodIcon/1", "desc":"天赋培养到蓝色三星(<color=#a80000>{0}</color>/{1})", "functionId":3001, "completeType":10, "completeValue":[6], "completeTotal":1, "isOpen":1 },
+{ "ID":1013, "name":"打造神兵", "icon":"Hero/GodIcon/2", "desc":"打造该武将的专属神兵(<color=#a80000>{0}</color>/{1})", "functionId":2400, "completeType":11, "completeValue":[0], "completeTotal":1, "isOpen":1 }]

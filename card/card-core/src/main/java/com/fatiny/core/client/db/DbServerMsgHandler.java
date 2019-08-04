@@ -7,13 +7,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.fatiny.core.server.db.message.Command;
 import com.fatiny.core.server.db.message.CompositeReqMsg;
 import com.fatiny.core.server.db.message.DbServerMsg;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 消息回调处理器
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerMsgHandler {
 	
 	/** callbackId生成器 */
@@ -53,7 +53,7 @@ public class DbServerMsgHandler {
 		Response resp = callbacks.remove(callbackId);
 		if (resp == null) {
 			Command cmd = responseMsg.getCmd();
-			GameLog.error("收到不存在回调的响应:{}, callbackId:{}", cmd, callbackId);
+			log.error("收到不存在回调的响应:{}, callbackId:{}", cmd, callbackId);
 			return;
 		}
 		responseMsg.doResponse(resp);

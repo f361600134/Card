@@ -1,0 +1,8 @@
+[
+{ "ID":1, "speed":5, "hp":5, "att":3, "def":2, "apDef":2 },
+{ "ID":2, "speed":7, "hp":10, "att":6, "def":4, "apDef":4 },
+{ "ID":3, "speed":9, "hp":15, "att":9, "def":6, "apDef":6 },
+{ "ID":4, "speed":11, "hp":20, "att":12, "def":8, "apDef":8 },
+{ "ID":5, "speed":13, "hp":25, "att":15, "def":10, "apDef":10 },
+{ "ID":6, "speed":15, "hp":30, "att":18, "def":12, "apDef":12 },
+{ "ID":7, "speed":20, "hp":35, "att":21, "def":14, "apDef":14 }]

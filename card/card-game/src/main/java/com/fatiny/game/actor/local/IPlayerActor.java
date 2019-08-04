@@ -3,7 +3,7 @@ package com.fatiny.game.actor.local;
 import com.fatiny.core.server.main.GameSession;
 import com.fatiny.core.server.main.dispatcher.Dispatcher;
 import com.fatiny.game.base.Packet;
-import com.fatiny.game.module.player.domain.PlayerContext;
+import com.fatiny.game.game.module.player.domain.PlayerContext;
 
 
 /**

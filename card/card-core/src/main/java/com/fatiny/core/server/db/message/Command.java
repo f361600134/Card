@@ -11,13 +11,13 @@ import javax.sql.DataSource;
 import com.fatiny.core.data.BasePo;
 import com.fatiny.core.server.db.dao.Dao;
 import com.fatiny.core.server.db.message.BatchSaveMsg.PoInfo;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据库执行命令
- * 
- * @author huachp
  */
+@Slf4j
 public enum Command implements Constant {
 	
 	
@@ -172,7 +172,7 @@ public enum Command implements Constant {
 				List data = Dao.getDao(cls).select(ds, primaryId);
 				batchLoadMsg.addData(cls, data);
 				it.remove(); // 删除已加载成功的class
-				GameLog.debug("批量加载对象{}数据", cls);
+				log.debug("批量加载对象{}数据", cls);
 			}
 			return Collections.emptyList();
 		}

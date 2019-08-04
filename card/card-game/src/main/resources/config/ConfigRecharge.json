@@ -1,0 +1,10 @@
+[
+{ "ID":1, "name":"月卡(送300元宝)", "type":2, "descption":"每日领取120元宝以及更多福利，持续30天", "icon":"VIP/Gold1", "amount":25, "baseDiamond":300, "gainDiamond":300, "duration":30, "vipExp":300 },
+{ "ID":2, "name":"至尊卡(送500元宝)", "type":3, "descption":"每日领取180元宝以及更多福利，永久有效", "icon":"VIP/Gold2", "amount":50, "baseDiamond":500, "gainDiamond":500, "duration":36500, "vipExp":500 },
+{ "ID":3, "name":"6480元宝", "type":1, "descption":"额外赠送6480元宝", "icon":"VIP/Gold3", "amount":648, "baseDiamond":6480, "gainDiamond":6480, "duration":0, "vipExp":6480 },
+{ "ID":4, "name":"3280元宝", "type":1, "descption":"额外赠送3280元宝", "icon":"VIP/Gold4", "amount":328, "baseDiamond":3280, "gainDiamond":3280, "duration":0, "vipExp":3280 },
+{ "ID":5, "name":"1980元宝", "type":1, "descption":"额外赠送1980元宝", "icon":"VIP/Gold5", "amount":198, "baseDiamond":1980, "gainDiamond":1980, "duration":0, "vipExp":1980 },
+{ "ID":6, "name":"980元宝", "type":1, "descption":"额外赠送980元宝", "icon":"VIP/Gold6", "amount":98, "baseDiamond":980, "gainDiamond":980, "duration":0, "vipExp":980 },
+{ "ID":7, "name":"500元宝", "type":1, "descption":"额外赠送500元宝", "icon":"VIP/Gold7", "amount":50, "baseDiamond":500, "gainDiamond":500, "duration":0, "vipExp":500 },
+{ "ID":8, "name":"300元宝", "type":1, "descption":"额外赠送300元宝", "icon":"VIP/Gold8", "amount":30, "baseDiamond":300, "gainDiamond":300, "duration":0, "vipExp":300 },
+{ "ID":9, "name":"60元宝", "type":1, "descption":"额外赠送60元宝", "icon":"VIP/Gold9", "amount":6, "baseDiamond":60, "gainDiamond":60, "duration":0, "vipExp":60 }]

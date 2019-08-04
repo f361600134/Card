@@ -16,8 +16,9 @@ import com.fatiny.core.server.db.message.BatchLoadMsg;
 import com.fatiny.core.server.db.message.Command;
 import com.fatiny.core.server.db.message.DbServerMsg;
 import com.fatiny.core.server.db.message.DbServerRespMsg;
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.IdHelper;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * mysql业务执行者
@@ -29,9 +30,8 @@ import com.fatiny.core.util.IdHelper;
  * 	2. mysql读和写分离在两个线程组执行(优先保证mysql读的效率, 不受mysql写的影响)
  * 	3. 线程分配通过DbServerMsg的getId()绑定, 同一个id的请求保证执行顺序
  * 	4. 由于读和写是分离的, 同一个id的请求读写不同步
- * 
- * @author huachp
  */
+@Slf4j
 public class MysqlExecutor {
 	
 	/** mysql读工作线程 */
@@ -93,13 +93,13 @@ public class MysqlExecutor {
 					if (cmd.isReadType()) {
 						List dataList = processLoad(requestMsg, cmd);
 						loadSuccess(ctx, requestMsg, dataList);
-						GameLog.debug("成功加载数据:{}", dataList);
+						log.debug("成功加载数据:{}", dataList);
 					} else {
-						GameLog.error("ReadWorker收到不正确的操作类型:{}, ", cmd);
+						log.error("ReadWorker收到不正确的操作类型:{}, ", cmd);
 					}
 					
 				} catch (Exception e) {
-					GameLog.error("ReadWorker加载数据过程出现异常", e);
+					log.error("ReadWorker加载数据过程出现异常", e);
 					// 失败返回
 					StringBuilder builder = new StringBuilder(); 
 					builder.append("load data failure, cause:").append(e.getMessage());
@@ -129,7 +129,7 @@ public class MysqlExecutor {
 				DataSource ds = DbManager.getDataSource(serverId);
 				dataList = cmd.execLoad(ds, reqMsg);
 			} else {
-				GameLog.error("查询数据库ID有误:{}", id);
+				log.error("查询数据库ID有误:{}", id);
 			}
 			return dataList;
 		}
@@ -182,13 +182,13 @@ public class MysqlExecutor {
 						DbServerRespMsg response = DbServerRespMsg.createSaveResp(requestMsg);
 						ctx.getChannel().writeAndFlush(response);
 						
-						GameLog.debug("成功保存数据:{}", requestMsg);
+						log.debug("成功保存数据:{}", requestMsg);
 					} else {
-						GameLog.error("WriteWorker收到不正确的操作类型:{}, ", cmd);
+						log.error("WriteWorker收到不正确的操作类型:{}, ", cmd);
 					}
 					
 				} catch (Exception e) {
-					GameLog.error("WriteWorker保存数据过程出现异常", e);
+					log.error("WriteWorker保存数据过程出现异常", e);
 					// 失败返回
 					StringBuilder builder = new StringBuilder(); 
 					builder.append("save data failure, cause:").append(e.getMessage());
@@ -225,7 +225,7 @@ public class MysqlExecutor {
 				readWorker.workQueue.put(ctx);	// 队列满载时阻塞
 			}
 		} catch (Exception e) {
-			GameLog.error("mysqlExecutor异步过程出现异常", e);
+			log.error("mysqlExecutor异步过程出现异常", e);
 			// 失败返回
 			StringBuilder builder = new StringBuilder(); 
 			builder.append("save data failure, cause:").append(e.getMessage());

@@ -1,0 +1,10 @@
+[
+{ "ID":1, "condition":20, "reward":[[101,1500]] },
+{ "ID":2, "condition":30, "reward":[[101,1500]] },
+{ "ID":3, "condition":35, "reward":[[101,1500]] },
+{ "ID":4, "condition":40, "reward":[[101,1500]] },
+{ "ID":5, "condition":42, "reward":[[101,2000]] },
+{ "ID":6, "condition":44, "reward":[[101,2000]] },
+{ "ID":7, "condition":46, "reward":[[101,2000]] },
+{ "ID":8, "condition":48, "reward":[[101,2000]] },
+{ "ID":9, "condition":50, "reward":[[101,2000]] }]

@@ -3,13 +3,12 @@ package com.fatiny.core.bootstrap;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import com.fatiny.core.util.GameLog;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 服务配置
- * 
- * @author huachp
  */
+@Slf4j
 public class ServerConfig {
 	
 	public static final String MAIN_SERVER = "main"; // game server
@@ -39,7 +38,7 @@ public class ServerConfig {
 				fis.close();
 			}
 		} catch (Exception e) {
-			GameLog.error("读取服务配置出错", e);
+			log.error("读取服务配置出错", e);
 		}
 	}
 	
@@ -75,7 +74,7 @@ public class ServerConfig {
 	
 	public static ServerConfig create() {
 		ServerConfig config = new ServerConfig();
-		config.load("config/server.properties");
+		config.load("src/main/resources/server.properties");
 		return config;
 	}
 	

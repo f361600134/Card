@@ -1,0 +1,8 @@
+[
+{ "ID":1, "Sender":"皇城争霸", "EmailSubject":"皇城争霸奖励", "StorageTime":7, "EmailContent":"亲爱的玩家：今日21:00，您在本次皇城争\n霸中获得了{0}一职，特发放官职俸禄。\n[本邮件只保留7天请及时领取]" },
+{ "ID":2, "Sender":"擂台赛", "EmailSubject":"擂台赛", "StorageTime":7, "EmailContent":"亲爱的玩家：截止至周六22:00，您在\n{0}中排名第{1}，成功进入{2}。" },
+{ "ID":3, "Sender":"擂台赛", "EmailSubject":"群雄擂台赛奖励", "StorageTime":7, "EmailContent":"亲爱的玩家：截止至今日22:00，您在本次\n群雄擂台赛{0}中排名第{1}位，为您发放排\n名奖励。[本邮件只保留7天请及时领取]" },
+{ "ID":4, "Sender":"将魂试炼", "EmailSubject":"将魂副本排名", "StorageTime":7, "EmailContent":"亲爱的玩家：截止至今日03:00，您在本次\n将魂副本中排名第{0}位，为您发放排名奖\n励。[本邮件只保留7天请及时领取]" },
+{ "ID":5, "Sender":"攻城拔寨系统", "EmailSubject":"攻城拔寨补充奖励", "StorageTime":7, "EmailContent":"亲爱的玩家：您在攻城拔寨中的资源点已被\n{0}抢夺，被抢时所搜集到的奖励如下：" },
+{ "ID":6, "Sender":"攻城拔寨系统", "EmailSubject":"攻城拔寨重置奖励", "StorageTime":7, "EmailContent":"亲爱的玩家：您在攻城拔寨中的资源点到时\n间已重置，所搜集到的奖励如下：" },
+{ "ID":7, "Sender":"团购福利", "EmailSubject":"团购福利", "StorageTime":30, "EmailContent":"亲爱的玩家：你参加的团购福利活动，购买\n人数达到{0}人，为你发放团购阶段奖励。" }]

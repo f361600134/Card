@@ -20,14 +20,14 @@ import com.fatiny.core.data.BasePo;
 import com.fatiny.core.data.PoRegister;
 import com.fatiny.core.data.SqlHelper;
 import com.fatiny.core.server.db.message.Command;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
  * 数据服dao层
- * 
- * @author huachp
  */
+@Slf4j
 public class Dao<T extends BasePo> {
 
 	private static final Map<Class<?>, Dao> daos = new HashMap<>();
@@ -85,7 +85,7 @@ public class Dao<T extends BasePo> {
 				batchSqls[i] = null; // 置空
 			}
 		}
-		GameLog.error("执行失败的sqls:{}", errorSqls);
+		log.error("执行失败的sqls:{}", errorSqls);
 		
 		try {
 			Connection conn = ds.getConnection();
@@ -107,10 +107,10 @@ public class Dao<T extends BasePo> {
 			}
 			batchStatement.close();
 			conn.close();
-			GameLog.error("批量保存异常处理成功, 正确sql语句已执行完毕");
+			log.error("批量保存异常处理成功, 正确sql语句已执行完毕");
 			
 		} catch (Exception e) {
-			GameLog.error("handleSaveException出现异常", e);
+			log.error("handleSaveException出现异常", e);
 		} 
 	}
 	

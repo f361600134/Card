@@ -1,0 +1,6 @@
+[
+{ "ID":1, "name":"青龙组", "type":1, "group":1, "maximum":999999, "winAward":[[112,100],[104,300]], "loseAward":[[112,100]] },
+{ "ID":2, "name":"玄武组", "type":1, "group":1, "maximum":999999, "winAward":[[112,100],[104,300]], "loseAward":[[112,100]] },
+{ "ID":3, "name":"朱雀组", "type":1, "group":1, "maximum":999999, "winAward":[[112,100],[104,300]], "loseAward":[[112,100]] },
+{ "ID":4, "name":"天组", "type":2, "group":1, "maximum":96, "winAward":[[112,100],[104,300]], "loseAward":[[112,100]] },
+{ "ID":5, "name":"地组", "type":2, "group":1, "maximum":999999, "winAward":[[112,100],[104,300]], "loseAward":[[112,100]] }]

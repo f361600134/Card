@@ -3,7 +3,6 @@ package com.fatiny.core.net;
 import java.io.File;
 import java.io.FileOutputStream;
 
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.HttpDownloadClient.DownloadDoneListener;
 
 import io.netty.buffer.ByteBuf;
@@ -14,7 +13,9 @@ import io.netty.handler.codec.http.HttpHeaderNames;
 import io.netty.handler.codec.http.HttpResponse;
 import io.netty.handler.codec.http.LastHttpContent;
 import io.netty.util.internal.SystemPropertyUtil;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class HttpDownloadHandler extends ChannelInboundHandlerAdapter {
 	private boolean readingChunks = false; // 分块读取开关
 	private FileOutputStream fOutputStream = null;// 文件输出流
@@ -37,7 +38,7 @@ public class HttpDownloadHandler extends ChannelInboundHandlerAdapter {
 				setDownLoadFile();// 设置下载文件
 				readingChunks = true;
 			}
-			GameLog.debug("CONTENT_TYPE:{}", response.headers().get(HttpHeaderNames.CONTENT_TYPE));
+			log.debug("CONTENT_TYPE:{}", response.headers().get(HttpHeaderNames.CONTENT_TYPE));
 		}
 		if (msg instanceof HttpContent) {// response体信息
 			HttpContent chunk = (HttpContent) msg;
@@ -61,7 +62,7 @@ public class HttpDownloadHandler extends ChannelInboundHandlerAdapter {
 		}
 		if (!readingChunks) {
 			if (null != fOutputStream) {
-				GameLog.info("Download done->{}", localfile.getAbsolutePath());
+				log.info("Download done->{}", localfile.getAbsolutePath());
 				fOutputStream.flush();
 				fOutputStream.close();
 				localfile = null;
@@ -92,7 +93,7 @@ public class HttpDownloadHandler extends ChannelInboundHandlerAdapter {
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-		GameLog.error("管道异常：{}", cause.getMessage(), cause);
+		log.error("管道异常：{}", cause.getMessage(), cause);
 		ctx.channel().close();
 	}
 	

@@ -3,12 +3,13 @@ package com.fatiny.core.server.db.dao;
 import com.fatiny.core.data.BasePo;
 import com.fatiny.core.data.PO;
 import com.fatiny.core.data.SqlHelper;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据库表对象
- * @author chao
  */
+@Slf4j
 public class TableObject {
 
 	public final Class<?> cls;
@@ -31,7 +32,7 @@ public class TableObject {
 		try {
 			ins = cls.newInstance();
 		} catch (Exception e) {
-			GameLog.error("BasePo对象反射出错:{}", po, e);
+			log.error("BasePo对象反射出错:{}", po, e);
 		}
 		
 		this.selectAll = SqlHelper.selectAll(tbName);

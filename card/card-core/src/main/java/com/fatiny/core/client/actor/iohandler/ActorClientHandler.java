@@ -6,11 +6,12 @@ import java.net.SocketAddress;
 import com.fatiny.core.akka.remote.ActorMessage;
 import com.fatiny.core.client.actor.ActorDetectionHander;
 import com.fatiny.core.client.actor.ActorMsgHandler;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class ActorClientHandler extends SimpleChannelInboundHandler<ActorMessage> {
 	
 	private ActorMsgHandler msgHandler;
@@ -31,7 +32,7 @@ public class ActorClientHandler extends SimpleChannelInboundHandler<ActorMessage
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		GameLog.info("检测到远程Actor连接断开:{}", ctx.channel().remoteAddress());
+		log.info("检测到远程Actor连接断开:{}", ctx.channel().remoteAddress());
 	}
 	
 	
@@ -51,7 +52,7 @@ public class ActorClientHandler extends SimpleChannelInboundHandler<ActorMessage
 		if (cause instanceof IOException) {
 			return;
 		} else {
-			GameLog.error("actor客户端通信异常", cause);
+			log.error("actor客户端通信异常", cause);
 		}
 	}
 	

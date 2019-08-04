@@ -5,13 +5,13 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.fatiny.core.akka.remote.ActorMessage;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 消息回调处理器
- * 
- * @author huachp
  */
+@Slf4j
 public class ActorMsgHandler {
 	
 	/** callbackId生成器 */
@@ -34,7 +34,7 @@ public class ActorMsgHandler {
 		int msgId = responseMsg.getId();
 		ActorCallback callback = callbacks.remove(msgId);
 		if (callback == null) {
-			GameLog.error("收到不存在的Actor回调, messageId:{}", msgId);
+			log.error("收到不存在的Actor回调, messageId:{}", msgId);
 			return;
 		}
 		callback.onCall(responseMsg);

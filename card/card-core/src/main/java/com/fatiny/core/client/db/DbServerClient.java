@@ -10,7 +10,6 @@ import com.fatiny.core.client.db.iohandler.DbServerClientHandler;
 import com.fatiny.core.net.KryoDecoder;
 import com.fatiny.core.net.KryoEncoder;
 import com.fatiny.core.server.db.message.DbServerMsg;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -22,12 +21,12 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据服客户端
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerClient {
 	
 	/** 数据服客户端配置 */
@@ -94,7 +93,7 @@ public class DbServerClient {
 	
 	private boolean checkInit0() {
 		if (!serverInfos.isEmpty()) {
-			GameLog.error("数据服客户端已进行过初始化, 请检查代码; {}", serverInfos);
+			log.error("数据服客户端已进行过初始化, 请检查代码; {}", serverInfos);
 			return false;
 		}
 		return true;
@@ -164,15 +163,15 @@ public class DbServerClient {
 	void reconnect(DbServerInfo serverInfo) {
 		if (!serverInfo.isActive()) {
 			try {
-				GameLog.info("尝试重连数据服, {}", serverInfo.getServerAddr());
+				log.info("尝试重连数据服, {}", serverInfo.getServerAddr());
 				DbServerMsgHandler msgHandler = serverInfo.getMsgHandler();
 				if (msgHandler == null) {
-					GameLog.error("数据服客户端消息接收队列=null"); return;
+					log.error("数据服客户端消息接收队列=null"); return;
 				}
 				connectToServer(serverInfo);
-				GameLog.info("数据服重连成功, {}", serverInfo);
+				log.info("数据服重连成功, {}", serverInfo);
 			} catch (Exception e) {
-				GameLog.error("数据服重连失败, {}", serverInfo);
+				log.error("数据服重连失败, {}", serverInfo);
 			}
 		}
 	}
@@ -211,11 +210,11 @@ public class DbServerClient {
 			
 			serverInfo.init(bootstrap, msgHandler); // 先初始化Bootstrap, msgHandler
 			connectToServer(serverInfo);
-			GameLog.info("数据服客户端启动成功, {}", serverInfo);
+			log.info("数据服客户端启动成功, {}", serverInfo);
 		} catch (ConnectException e) {
-			GameLog.error("数据服初始连接失败, {}", serverInfo);
+			log.error("数据服初始连接失败, {}", serverInfo);
 		} catch (Exception e) {
-			GameLog.error("数据服客户端连接初始化过程出现异常", e);
+			log.error("数据服客户端连接初始化过程出现异常", e);
 			throw new RuntimeException(e);
 		}
 	}

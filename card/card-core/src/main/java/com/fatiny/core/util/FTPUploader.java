@@ -9,11 +9,12 @@ import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPReply;
 import org.apache.commons.net.ftp.FTPSClient;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * ftp上传工具
- *  
- * @author huachp
  */
+@Slf4j
 public class FTPUploader {
 	
 	/**
@@ -31,7 +32,7 @@ public class FTPUploader {
 		ftp.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out), true));
 		try {
 			ftp.connect(server);
-			GameLog.info("Connected to " + server + " on " + ftp.getDefaultPort());
+			log.info("Connected to " + server + " on " + ftp.getDefaultPort());
 			
 			// After connection attempt, you should check the reply code to verify
 			// success.
@@ -39,7 +40,7 @@ public class FTPUploader {
 			
 			if (!FTPReply.isPositiveCompletion(reply)) {
 				ftp.disconnect();
-				GameLog.error("FTP server refused connection.");
+				log.error("FTP server refused connection.");
 				return;
 			}
 			
@@ -59,12 +60,12 @@ public class FTPUploader {
 			
 			File uploadFile = new File(uploadFilePath);
 			if (!ftp.storeFile(uploadFile.getName(), new FileInputStream(uploadFile))) {
-				GameLog.info("上传文件失败");
+				log.info("上传文件失败");
 			}
 			
-			GameLog.info("成功上传文件:{}", uploadFile.getName());
+			log.info("成功上传文件:{}", uploadFile.getName());
 		} catch (Exception e) {
-			GameLog.error("", e);
+			log.error("", e);
 		}
 	}
 	

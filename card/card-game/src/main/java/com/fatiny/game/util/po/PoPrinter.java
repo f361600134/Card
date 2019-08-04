@@ -13,15 +13,17 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import com.fatiny.core.util.GameLog;
 import com.fatiny.game.util.DirUtils;
 import com.fatiny.game.util.StringHelper;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * PO打印机4.2
  */
+@Slf4j
 public class PoPrinter {
 
 	/**
@@ -72,7 +74,7 @@ public class PoPrinter {
 						ctype = sqlTypeToJavaType(ctype);
 						
 					} catch (Exception e) {
-						GameLog.error("e:{}, cname:{} , poName:{}", e, cname, poName);
+						log.error("e:{}, cname:{} , poName:{}", e, cname, poName);
 					}
 					
 					colNames.add(StringHelper.underlineToLowerCamal(cname));

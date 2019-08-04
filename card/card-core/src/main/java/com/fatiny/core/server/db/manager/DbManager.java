@@ -12,13 +12,13 @@ import javax.sql.DataSource;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.fatiny.core.server.db.DbServerConfig;
-import com.fatiny.core.util.GameLog;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据库连接管理
- * 
- * @author huachp
  */
+@Slf4j
 public class DbManager {
 	
 	static Map<Integer, DataSource> dataSources = new HashMap<>();
@@ -34,11 +34,11 @@ public class DbManager {
 				DataSource ds = DruidDataSourceFactory.createDataSource(config);
 				dataSources.put(serverId, ds);
 				
-				GameLog.info("初始化数据库连接池:{}", config.getProperty("url"));
+				log.info("初始化数据库连接池:{}", config.getProperty("url"));
 			}
 			
 		} catch (Exception e) {
-			GameLog.error("数据库连接池初始化过程出现错误", e);
+			log.error("数据库连接池初始化过程出现错误", e);
 		}
 		
 	}
@@ -62,7 +62,7 @@ public class DbManager {
 			DataSource ds = getDataSource(serverId);
 			return ds.getConnection();
 		} catch (Exception e) {
-			GameLog.error("获取连接出现错误, serverId:{}", serverId, e);
+			log.error("获取连接出现错误, serverId:{}", serverId, e);
 		}
 		return null;
 	}
@@ -72,7 +72,7 @@ public class DbManager {
 		try {
 			c.close();
 		} catch (SQLException e) {
-			GameLog.error("关闭连接出现错误", e);
+			log.error("关闭连接出现错误", e);
 		}
 	}
 	
@@ -81,7 +81,7 @@ public class DbManager {
 		try {
 			st.close();
 		} catch (SQLException e) {
-			GameLog.error("closeStatement occur ex", e);
+			log.error("closeStatement occur ex", e);
 		}
 	}
 	

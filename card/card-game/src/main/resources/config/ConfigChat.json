@@ -1,0 +1,5 @@
+[
+{ "ID":1, "name":"世界", "openlv":1, "speeklv":20, "takltime":3, "IncrementalTime":10, "totalNumber":100, "preNumber":10 },
+{ "ID":2, "name":"国家", "openlv":1, "speeklv":20, "takltime":3, "IncrementalTime":10, "totalNumber":100, "preNumber":10 },
+{ "ID":3, "name":"家族", "openlv":1, "speeklv":20, "takltime":3, "IncrementalTime":10, "totalNumber":100, "preNumber":10 },
+{ "ID":4, "name":"私聊", "openlv":1, "speeklv":20, "takltime":3, "IncrementalTime":10, "totalNumber":100, "preNumber":10 }]

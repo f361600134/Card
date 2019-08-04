@@ -8,17 +8,19 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.XMLUtils;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * actor服务配置
  * 
  * @author huachp
  */
+@Slf4j
 public class ActorServerConfig {
 	
-	private static final String PATH = "config/akka/actor-remote.xml";
+	private static final String PATH = "src/main/resources/akka/actor-remote.xml";
 	
 	private static ActorServerConfig instance = new ActorServerConfig();
 	
@@ -29,7 +31,7 @@ public class ActorServerConfig {
 	}
 	
 	public void loadConfig() {
-		GameLog.info("初始化actor server配置 -> {}", PATH);
+		log.info("初始化actor server配置 -> {}", PATH);
 		Element element = XMLUtils.getElementMyXML(PATH);
         NodeList fatherNodes = element.getChildNodes();		// 父节点<dbConfig>
 		List<Node> childNodes1 = XMLUtils.getAllChildNodesMyXML(fatherNodes); // 一级子节点
@@ -45,7 +47,7 @@ public class ActorServerConfig {
     					nodeMap.getNamedItem("value").getNodeValue());
 		}
         this.config = p;
-        GameLog.info("actor server配置初始化完成");
+        log.info("actor server配置初始化完成");
 	}
 	
 	

@@ -9,14 +9,14 @@ import com.fatiny.core.client.db.Response;
 import com.fatiny.core.server.db.message.BatchSaveMsg;
 import com.fatiny.core.server.db.message.Command;
 import com.fatiny.core.server.db.message.CompositeReqMsg;
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.IdHelper;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 批量保存
- * 
- * @author huachp
  */
+@Slf4j
 public class BatchSaveData {
 	
 	private static final int BATCH_COUNT = 100; // 批处理数量
@@ -78,7 +78,7 @@ public class BatchSaveData {
 			batchMark = 0;
 			return resp;
 		} else {
-			GameLog.error("save batch data error, mark={}", batchMark);
+			log.error("save batch data error, mark={}", batchMark);
 			throw new IllegalArgumentException("save batch data error, mark=" + batchMark);
 		}
 	}

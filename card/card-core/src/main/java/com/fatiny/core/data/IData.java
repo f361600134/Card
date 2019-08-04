@@ -9,8 +9,6 @@ import com.fatiny.core.server.db.message.BatchLoadMsg;
 
 /**
  * 数据接口
- * 
- * @author huachp
  */
 public interface IData {
 

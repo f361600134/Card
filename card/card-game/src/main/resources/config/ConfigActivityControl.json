@@ -1,0 +1,10 @@
+[
+{ "ID":1, "version":1, "type":0, "timecnf":"", "open":1 },
+{ "ID":2, "version":1, "type":0, "timecnf":"", "open":0 },
+{ "ID":3, "version":1, "type":0, "timecnf":"", "open":0 },
+{ "ID":4, "version":1, "type":0, "timecnf":"", "open":0 },
+{ "ID":5, "version":1, "type":0, "timecnf":"", "open":0 },
+{ "ID":6, "version":1, "type":0, "timecnf":"", "open":0 },
+{ "ID":7, "version":1, "type":0, "timecnf":"2019-06-20 00:00:00|2019-06-26 00:00:00", "open":1 },
+{ "ID":8, "version":1, "type":0, "timecnf":"2019-06-20 00:00:00|2019-06-26 00:00:00", "open":1 },
+{ "ID":9, "version":1, "type":0, "timecnf":"2019-06-20 00:00:00|2019-06-26 00:00:00", "open":1 }]

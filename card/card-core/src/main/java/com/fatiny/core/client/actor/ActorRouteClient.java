@@ -8,7 +8,6 @@ import com.fatiny.core.akka.remote.ActorMessage;
 import com.fatiny.core.client.actor.iohandler.ActorClientHandler;
 import com.fatiny.core.net.KryoDecoder;
 import com.fatiny.core.net.KryoEncoder;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -22,12 +21,12 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.flush.FlushConsolidationHandler;
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Actor路由客户端
- * 
- * @author huachp
  */
+@Slf4j
 public class ActorRouteClient {
 	
 	/** Actor远程配置 */
@@ -102,7 +101,7 @@ public class ActorRouteClient {
 	
 	private boolean checkInit0() {
 		if (!serverInfos.isEmpty()) {
-			GameLog.error(
+			log.error(
 					"Actor连接客户端已进行过初始化, 请检查代码; {}", serverInfos);
 			return false;
 		}
@@ -168,7 +167,7 @@ public class ActorRouteClient {
 	public void request(int actorId, Object message, ActorCallback callback) {
 		ActorServerInfo serverInfo = routeHandler.allocate(actorId);
 		if (!serverInfo.isConnect()) {
-			GameLog.error("远程Actor服务不可用"); return;
+			log.error("远程Actor服务不可用"); return;
 		}
 		ActorMsgHandler msgHandler = serverInfo.getMsgHandler();
 		ActorMessage actorMsg = ActorMessage.create(actorId, message);
@@ -180,15 +179,15 @@ public class ActorRouteClient {
 	public void reconnect(ActorServerInfo serverInfo) {
 		if (!serverInfo.isActive()) {
 			try {
-				GameLog.info("尝试重连远程Actor服务, {}", serverInfo.getServerAddr());
+				log.info("尝试重连远程Actor服务, {}", serverInfo.getServerAddr());
 				ActorMsgHandler msgHandler = serverInfo.getMsgHandler();
 				if (msgHandler == null) {
-					GameLog.error("Actor Client接收端消息队列=null"); return;
+					log.error("Actor Client接收端消息队列=null"); return;
 				}
 				connectToServer(serverInfo);
-				GameLog.info("远程Actor服务重连成功, {}", serverInfo);
+				log.info("远程Actor服务重连成功, {}", serverInfo);
 			} catch (Exception e) {
-				GameLog.error("远程Actor服务重连失败, {}", serverInfo);
+				log.error("远程Actor服务重连失败, {}", serverInfo);
 			}
 		}
 	}
@@ -226,11 +225,11 @@ public class ActorRouteClient {
 			
 			serverInfo.init(bootstrap, msgHandler); // 先初始化Bootstrap, msgHandler
 			connectToServer(serverInfo);  // 开始连接
-			GameLog.info("Actor客户端启动成功, {}", serverInfo);
+			log.info("Actor客户端启动成功, {}", serverInfo);
 		} catch (ConnectException e) {
-			GameLog.error("远程Actor服务连接失败, {}", serverInfo);
+			log.error("远程Actor服务连接失败, {}", serverInfo);
 		} catch (Exception e) {
-			GameLog.error("Actor路由客户端连接初始化过程出现异常", e);
+			log.error("Actor路由客户端连接初始化过程出现异常", e);
 			throw new RuntimeException(e);
 		}
 	}

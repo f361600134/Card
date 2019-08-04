@@ -12,19 +12,20 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.XMLUtils;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据服配置
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerConfig {
 
 	private final static Logger logger = LoggerFactory.getLogger(DbServerConfig.class);
 	
-	private static final String PATH = "config/db/db-mapping.xml";
+	//src/main/resources/server.properties
+	private static final String PATH = "src/main/resources/db/db-mapping.xml";
 	
 	private static DbServerConfig instance = new DbServerConfig();
 	
@@ -63,7 +64,7 @@ public class DbServerConfig {
     			dataSourceCfgs.put(serverId, p);
 			}
 		}
-        GameLog.info("数据服配置初始化完成");
+        log.info("数据服配置初始化完成");
 	}
 
 	

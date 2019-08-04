@@ -1,0 +1,9 @@
+[
+{ "ID":1, "name":"10人奖励", "condition":10, "reward":[[105,100]] },
+{ "ID":2, "name":"30人奖励", "condition":30, "reward":[[111,1000]] },
+{ "ID":3, "name":"50人奖励", "condition":50, "reward":[[42001,500]] },
+{ "ID":4, "name":"100人奖励", "condition":100, "reward":[[50007,1]] },
+{ "ID":5, "name":"200人奖励", "condition":200, "reward":[[80106,2]] },
+{ "ID":6, "name":"300人奖励", "condition":300, "reward":[[111,2000]] },
+{ "ID":7, "name":"500人奖励", "condition":500, "reward":[[106,1000]] },
+{ "ID":8, "name":"1000人奖励", "condition":1000, "reward":[[101,1000]] }]

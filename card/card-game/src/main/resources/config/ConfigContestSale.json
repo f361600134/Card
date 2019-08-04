@@ -1,0 +1,11 @@
+[
+{ "ID":1, "diamondConsume":20 },
+{ "ID":2, "diamondConsume":20 },
+{ "ID":3, "diamondConsume":20 },
+{ "ID":4, "diamondConsume":30 },
+{ "ID":5, "diamondConsume":30 },
+{ "ID":6, "diamondConsume":30 },
+{ "ID":7, "diamondConsume":50 },
+{ "ID":8, "diamondConsume":50 },
+{ "ID":9, "diamondConsume":100 },
+{ "ID":10, "diamondConsume":100 }]

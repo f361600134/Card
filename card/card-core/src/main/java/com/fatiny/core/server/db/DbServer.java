@@ -8,7 +8,6 @@ import com.fatiny.core.server.db.executor.MysqlExecutor;
 import com.fatiny.core.server.db.executor.RedisExecutor;
 import com.fatiny.core.server.db.iohandler.DbServerHandler;
 import com.fatiny.core.server.db.manager.DbManager;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -20,12 +19,12 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.util.concurrent.DefaultThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据服 主服务
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServer extends AbstractServer {
 	
 	private DbServerConfig config;
@@ -45,7 +44,7 @@ public class DbServer extends AbstractServer {
 	
 	
 	public void initExecutors() {
-		GameLog.info("启动数据服核心业务线程");
+		log.info("启动数据服核心业务线程");
 		int executorCount = Runtime.getRuntime().availableProcessors() * 4;
 		mysqlExecutor = new MysqlExecutor(executorCount);
 		redisExecutor = new RedisExecutor(executorCount);
@@ -86,9 +85,9 @@ public class DbServer extends AbstractServer {
 			
 			bootstrap.bind(ip, port).sync();
 			// log
-			GameLog.info("数据服启动成功, ip:{}, port:{}", ip, port);
+			log.info("数据服启动成功, ip:{}, port:{}", ip, port);
 		} catch (Exception e) {
-			GameLog.error("", e);
+			log.error("", e);
 			// log
 			throw new RuntimeException("Netty启动过程出现异常, 服务器关闭, 请检查");
 		}

@@ -21,7 +21,9 @@ import io.netty.handler.codec.http.HttpRequestEncoder;
 import io.netty.handler.codec.http.HttpResponseDecoder;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.stream.ChunkedWriteHandler;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class HttpDownloadClient {
 	
 	
@@ -65,7 +67,7 @@ public class HttpDownloadClient {
 				}
 			});
 		} catch (Exception ex) {
-			GameLog.error("http下载出错", ex);
+			log.error("http下载出错", ex);
 		}
 	}
 
@@ -102,7 +104,6 @@ public class HttpDownloadClient {
 	
 
 	public static void main(String[] args) throws Exception {
-		GameLog.init();
 		HttpDownloadClient client = new HttpDownloadClient();
 		client.connect("shootcdn.good321.net", 80, "https://shootcdn.good321.net/res/server/compressed.zip", "resources/res.zip", DownloadDoneListener.EMPTY);
 	}

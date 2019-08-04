@@ -15,17 +15,16 @@ import com.fatiny.core.server.db.message.DbServerMsg;
 import com.fatiny.core.server.db.message.DbServerReqMsg;
 import com.fatiny.core.server.db.message.DbServerRespMsg;
 import com.fatiny.core.server.db.message.ResourceReq;
-import com.fatiny.core.util.GameLog;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 消息处理器
- * 
- * @author huachp
  */
+@Slf4j
 public class DbServerHandler extends SimpleChannelInboundHandler<Object> {
 	
 	private MysqlExecutor mysqlExecutor;
@@ -39,13 +38,13 @@ public class DbServerHandler extends SimpleChannelInboundHandler<Object> {
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		GameLog.info("游戏服连接:{}", ctx.channel().remoteAddress());
+		log.info("游戏服连接:{}", ctx.channel().remoteAddress());
 	}
 	
 
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		GameLog.info("游戏服断开连接:{}", ctx.channel().remoteAddress());
+		log.info("游戏服断开连接:{}", ctx.channel().remoteAddress());
 	}
 
 
@@ -108,7 +107,7 @@ public class DbServerHandler extends SimpleChannelInboundHandler<Object> {
 		if (cause instanceof IOException) {
 			return;
 		} else {
-			GameLog.error("数据服Netty通信过程出现异常", cause);
+			log.error("数据服Netty通信过程出现异常", cause);
 		}
 	}
 	

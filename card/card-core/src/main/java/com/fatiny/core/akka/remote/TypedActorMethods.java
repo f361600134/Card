@@ -4,13 +4,12 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.fatiny.core.util.GameLog;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * TypedActor远程调用方法
- * 
- * @author huachp
  */
+@Slf4j
 public class TypedActorMethods {
 	
 	private Object actorObj;
@@ -26,7 +25,7 @@ public class TypedActorMethods {
 				actorMethods.putMethod(method);
 			}
 		} catch (Exception e) {
-			GameLog.error("初始化远程Actor Method Call异常, {}", interface0);
+			log.error("初始化远程Actor Method Call异常, {}", interface0);
 			throw e;
 		}
 		return actorMethods;
@@ -68,7 +67,7 @@ public class TypedActorMethods {
 			Object[] params = methodCall.getParameters();
 			return method.invoke(actorObj, params);
 		} catch (Exception e) {
-			GameLog.error("actor method call ocurr exception", e);
+			log.error("actor method call ocurr exception", e);
 			Throwable actualCause = e.getCause();
 			if (actualCause == null) {
 				return RemoteFailure.exception("远程调用");

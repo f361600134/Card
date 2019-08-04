@@ -11,17 +11,17 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.fatiny.core.util.GameLog;
 import com.fatiny.core.util.XMLUtils;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Actor配置 
- * 
- * @author huachp
  */
+@Slf4j
 public class ActorGroupConfig {
 	
-	private static final String PATH = "config/akka/actor-mapping.xml";
+	private static final String PATH = "src/main/resources/akka/actor-mapping.xml";
 	
 	private static ActorGroupConfig groupConfig = new ActorGroupConfig();
 	
@@ -33,7 +33,7 @@ public class ActorGroupConfig {
 	private Map<String, ActorConfig> configs = new HashMap<>();
 	
 	public void loadConfig() {
-		GameLog.info("加载Actor远程配置, {}", PATH);
+		log.info("加载Actor远程配置, {}", PATH);
 		Element element = XMLUtils.getElementMyXML(PATH);
         NodeList fatherNodes = element.getChildNodes();		// 父节点
 		List<Node> childNodes1 = XMLUtils.getAllChildNodesMyXML(fatherNodes); // 一级子节点
@@ -63,7 +63,7 @@ public class ActorGroupConfig {
         	int serverId = Integer.parseInt(p.getProperty("id"));
         	actorConfig.put(serverId, p);
 		}
-        GameLog.info("Actor远程配置加载完成");
+        log.info("Actor远程配置加载完成");
 	}
 	
 	private ActorConfig getActorConf(String actorName) {

@@ -1,6 +1,7 @@
 package com.fatiny.game.base;
 
 import com.fatiny.core.net.DataCarrier;
+
 import io.netty.buffer.ByteBuf;
 
 /**
@@ -10,7 +11,6 @@ public class Packet {
 	
 	/** 协议长度 */
 	public static final int PROTO_LEN = 2;
-	
 	
 	private final short cmd;
 	private final byte[] data;

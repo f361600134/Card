@@ -1,0 +1,8 @@
+[
+{ "ID":11, "name":"登录1天", "day":1, "type":1, "condition":1, "reward":[[101,100],[80403,1]] },
+{ "ID":21, "name":"登录2天", "day":2, "type":1, "condition":2, "reward":[[101,100],[22003,1]] },
+{ "ID":31, "name":"登录3天", "day":3, "type":1, "condition":3, "reward":[[101,150],[42001,80]] },
+{ "ID":41, "name":"登录4天", "day":4, "type":1, "condition":4, "reward":[[101,200],[80905,1]] },
+{ "ID":51, "name":"登录5天", "day":5, "type":1, "condition":5, "reward":[[101,300],[22001,1]] },
+{ "ID":61, "name":"登录6天", "day":6, "type":1, "condition":6, "reward":[[101,300],[80102,1]] },
+{ "ID":71, "name":"登录7天", "day":7, "type":1, "condition":7, "reward":[[101,400],[10062,1]] }]

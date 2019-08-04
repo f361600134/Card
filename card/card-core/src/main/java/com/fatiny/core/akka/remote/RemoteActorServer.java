@@ -3,7 +3,6 @@ package com.fatiny.core.akka.remote;
 import com.fatiny.core.akka.iohandler.ActorServerHandler;
 import com.fatiny.core.net.KryoDecoder;
 import com.fatiny.core.net.KryoEncoder;
-import com.fatiny.core.util.GameLog;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -18,12 +17,12 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.flush.FlushConsolidationHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 远程Actor服务
- * 
- * @author huachp
  */
+@Slf4j
 public class RemoteActorServer {
 	
 	private ActorServerConfig serverConf;
@@ -101,9 +100,9 @@ public class RemoteActorServer {
 			int port = serverConf.getPort();
 			
 			bootstrap.bind(ip, port).sync();
-			GameLog.info("远程actor server启动成功, ip:{}, port:{}", ip, port);
+			log.info("远程actor server启动成功, ip:{}, port:{}", ip, port);
 		} catch (Exception e) {
-			GameLog.error("", e);
+			log.error("", e);
 			// log
 			throw new RuntimeException("Netty启动过程出现异常, 服务器关闭, 请检查");
 		}

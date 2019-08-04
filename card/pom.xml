@@ -29,6 +29,6 @@
 	<modules>
 		<module>card-core</module>
 	    <module>card-game</module>
-	    <module>card-login-plus</module>
+<!-- 	    <module>card-login-plus</module> -->
 	</modules>
 </project>

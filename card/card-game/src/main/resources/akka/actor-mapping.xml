@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akka>
+	
+	<!-- 
+	<login-actor>
+		<properties key="id" value="10001"/>
+		<properties key="ip" value="10.6.8.100"/>
+		<properties key="port" value="7009"/>
+		<properties key="ip" value="127.0.0.1"/>
+		<properties key="port" value="7005"/>
+	</login-actor>
+	 -->
+	 
+	<!-- 
+	<fight-actor>
+		<properties key="id" value="10002"/>
+		<properties key="ip" value="10.6.8.100"/>
+		<properties key="port" value="7020"/>
+	</fight-actor>
+	 -->
+	<fight-actor>
+		<properties key="id" value="10002"/>
+		<properties key="ip" value="172.16.1.15"/>
+		<properties key="port" value="7020"/>
+	</fight-actor>
+	
+	<log-actor>
+		<properties key="id" value="10003"/>
+		<properties key="ip" value="10.6.8.100"/>
+		<properties key="port" value="6001"/>
+	</log-actor>
+	
+</akka>

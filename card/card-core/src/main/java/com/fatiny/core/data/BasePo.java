@@ -47,5 +47,17 @@ public abstract class BasePo implements Serializable {
 	 */
 	abstract public Object[] propValues();
 
+	//////////////持久///////////////
 	
+	public void save() {
+		DataContext.instance().gameData().insert(this.getClass(), this);
+	}
+	
+	public void update() {
+		DataContext.instance().gameData().update(this.getClass(), this);
+	}
+	
+	public void updateNoWait() {
+		DataContext.instance().gameData().update(this.getClass(), this);
+	}
 }
