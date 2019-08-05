@@ -9,7 +9,6 @@ import com.fatiny.core.data.Cacheable;
 /**
  * 数据服请求协议
  * 
- * @author huachp
  */
 public class DbServerReqMsg extends AbstractDbServerMsg {
 

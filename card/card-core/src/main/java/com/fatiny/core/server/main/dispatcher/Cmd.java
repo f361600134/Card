@@ -8,7 +8,6 @@ import java.lang.annotation.Target;
 /**
  * CMD
  *
- * @author huachp
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

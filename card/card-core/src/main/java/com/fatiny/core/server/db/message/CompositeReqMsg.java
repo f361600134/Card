@@ -5,7 +5,6 @@ import java.util.LinkedList;
 /**
  * 组合请求包
  * 
- * @author huachp
  */
 public class CompositeReqMsg extends AbstractDbServerMsg {
 

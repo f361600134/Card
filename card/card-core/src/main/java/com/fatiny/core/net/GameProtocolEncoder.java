@@ -7,7 +7,6 @@ import io.netty.handler.codec.MessageToByteEncoder;
 /**
  * 游戏协议编码器
  * 
- * @author huachp
  */
 public class GameProtocolEncoder extends MessageToByteEncoder<DataCarrier> {
 

@@ -7,7 +7,6 @@ import akka.actor.Status;
 /**
  * 远程失败
  * 
- * @author huachp
  */
 public class RemoteFailure {
 	

@@ -10,7 +10,6 @@ import com.fatiny.core.server.main.GameSession;
 /**
  * session管理
  * 
- * @author huachp
  */
 public class SessionGroup {
 	

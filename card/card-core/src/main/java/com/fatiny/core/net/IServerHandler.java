@@ -7,7 +7,6 @@ import io.netty.buffer.ByteBuf;
 /**
  * IServerHandler
  * 
- * @author huachp
  */
 public interface IServerHandler {
 	

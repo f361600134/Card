@@ -5,7 +5,6 @@ package com.fatiny.core.util;
  * <p>
  * 适用前端动作编号的Hash算法
  * 
- * @author huachp
  */
 public class CRC32HashUtil {
 	

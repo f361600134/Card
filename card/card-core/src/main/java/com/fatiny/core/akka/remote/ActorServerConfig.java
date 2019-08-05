@@ -15,7 +15,6 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * actor服务配置
  * 
- * @author huachp
  */
 @Slf4j
 public class ActorServerConfig {

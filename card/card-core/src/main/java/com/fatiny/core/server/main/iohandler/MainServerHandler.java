@@ -17,7 +17,6 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * 	2. 一条连接对应一个GameSession
  * 	3. 所有MainServerHandler持有的IServerHandler都是同一个引用
  * 
- * @author huachp
  */
 public class MainServerHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	

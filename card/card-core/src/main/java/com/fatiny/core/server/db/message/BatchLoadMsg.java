@@ -11,7 +11,6 @@ import com.fatiny.core.data.BasePo;
 /**
  * 批量加载(同一个玩家的批量数据加载)
  * 
- * @author huachp
  */
 public class BatchLoadMsg extends AbstractDbServerMsg {
 	

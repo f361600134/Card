@@ -3,7 +3,6 @@ package com.fatiny.game.base;
 /**
  * 启动初始化监听器
  * 
- * @author huachp
  */
 public interface InitializeListener {
 	

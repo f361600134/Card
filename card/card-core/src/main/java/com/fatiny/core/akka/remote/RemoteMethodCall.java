@@ -3,7 +3,6 @@ package com.fatiny.core.akka.remote;
 /**
  * 远程方法调用
  * 
- * @author huachp
  */
 public class RemoteMethodCall {
 	

@@ -5,7 +5,6 @@ import java.net.InetSocketAddress;
 /**
  * 数据发送载体
  * 
- * @author huachp
  */
 public class DataCarrier {
 

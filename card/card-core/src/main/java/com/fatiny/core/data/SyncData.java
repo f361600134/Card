@@ -17,7 +17,6 @@ import com.fatiny.core.server.db.message.DbServerReqMsg;
  * 	2.SyncData包含同步api和异步api
  * 	3.异步api后续会增加
  * 
- * @author huachp
  */
 public class SyncData implements IData {
 	

@@ -10,7 +10,6 @@ import com.fatiny.core.data.BasePo;
 /**
  * 批量保存
  * 
- * @author huachp
  */
 public class BatchSaveMsg extends AbstractDbServerMsg {
 	

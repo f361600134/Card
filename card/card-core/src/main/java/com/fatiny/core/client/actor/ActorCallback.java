@@ -8,7 +8,6 @@ import akka.actor.ActorRef;
 /**
  * Actor回调
  * 
- * @author huachp
  */
 public class ActorCallback {
 	

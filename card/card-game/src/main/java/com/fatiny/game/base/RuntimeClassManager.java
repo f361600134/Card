@@ -13,7 +13,6 @@ import com.fatiny.core.util.ClassPathScanner;
 /**
  * 运行时类管理器
  * 
- * @author huachp
  */
 public class RuntimeClassManager {
 

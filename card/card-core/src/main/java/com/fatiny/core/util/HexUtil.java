@@ -5,7 +5,6 @@ import java.io.ByteArrayOutputStream;
 /**
  * 十六进制转换工具类
  * 
- * @author huachp
  */
 public class HexUtil {
 	

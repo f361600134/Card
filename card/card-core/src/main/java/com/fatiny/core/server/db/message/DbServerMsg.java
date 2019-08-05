@@ -5,7 +5,6 @@ import com.fatiny.core.client.db.Response;
 /**
  * 数据服消息
  * 
- * @author huachp
  */
 public interface DbServerMsg {
 	

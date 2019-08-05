@@ -7,7 +7,6 @@ import io.netty.channel.Channel;
 /**
  * 数据服异步消息上下文
  * 
- * @author huachp
  */
 public class RequestContext {
 	

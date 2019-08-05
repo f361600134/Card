@@ -3,7 +3,6 @@ package com.fatiny.core.akka.remote;
 /**
  * TypedActor消息
  * 
- * @author huachp
  */
 public class ActorMessage {
 	

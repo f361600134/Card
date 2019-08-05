@@ -3,7 +3,6 @@ package com.fatiny.game.actor.remote;
 /**
  * 游戏服Actor
  * 
- * @author huachp
  */
 public interface IGameActor {
 	

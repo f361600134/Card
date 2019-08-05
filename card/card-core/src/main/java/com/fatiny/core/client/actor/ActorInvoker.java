@@ -7,7 +7,6 @@ import io.netty.util.concurrent.FastThreadLocal;
 /**
  * 异步请求Actor调用者
  * 
- * @author huachp
  */
 public class ActorInvoker {
 	

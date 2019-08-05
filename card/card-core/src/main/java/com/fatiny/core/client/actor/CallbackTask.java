@@ -5,7 +5,6 @@ import com.fatiny.core.akka.remote.RemoteFailure;
 /**
  * 回调任务
  * 
- * @author huachp
  */
 public abstract class CallbackTask {
 	

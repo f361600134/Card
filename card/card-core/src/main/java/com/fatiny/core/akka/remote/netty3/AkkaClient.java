@@ -10,8 +10,6 @@ import akka.actor.TypedProps;
 
 /**
  * actor客户端, 依赖Akka的网络层
- * 
- * @author huachp
  */
 public class AkkaClient {
 	

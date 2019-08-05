@@ -13,7 +13,6 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 /**
  * kryo对象反序列化解码器
  * 
- * @author huachp
  */
 public class KryoDecoder extends ByteToMessageDecoder {
 

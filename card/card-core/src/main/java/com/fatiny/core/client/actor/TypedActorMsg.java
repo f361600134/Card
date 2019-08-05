@@ -3,7 +3,6 @@ package com.fatiny.core.client.actor;
 /**
  * typed actor message
  * 
- * @author huachp
  */
 public class TypedActorMsg {
 

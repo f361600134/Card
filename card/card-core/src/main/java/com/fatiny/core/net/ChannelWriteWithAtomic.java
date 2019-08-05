@@ -11,7 +11,6 @@ import io.netty.util.concurrent.GenericFutureListener;
 /**
  * channel writer
  * 
- * @author huachp
  */
 public class ChannelWriteWithAtomic {
 	

@@ -11,7 +11,6 @@ import com.fatiny.core.server.db.message.DbServerRespMsg;
 /**
  * 消息响应
  * 
- * @author huachp
  */
 public class Response {
 

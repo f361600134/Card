@@ -3,7 +3,6 @@ package com.fatiny.core.bootstrap;
 /**
  * 服务启动接口
  * 
- * @author huachp
  */
 public interface IServer {
 	

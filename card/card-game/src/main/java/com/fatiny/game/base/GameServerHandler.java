@@ -11,7 +11,6 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 游戏服分发处理器
  * 
- * @author huachp
  */
 @Slf4j
 public class GameServerHandler implements IServerHandler {

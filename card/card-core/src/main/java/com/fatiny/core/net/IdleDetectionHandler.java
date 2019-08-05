@@ -11,7 +11,6 @@ import io.netty.handler.timeout.IdleStateEvent;
 /**
  * 空闲连接检测处理器
  * 
- * @author huachp
  */
 public class IdleDetectionHandler extends ChannelDuplexHandler {
 

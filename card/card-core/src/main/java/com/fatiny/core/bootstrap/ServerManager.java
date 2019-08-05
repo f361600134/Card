@@ -3,7 +3,6 @@ package com.fatiny.core.bootstrap;
 /**
  * 服务管理
  * 
- * @author huachp
  */
 public class ServerManager {
 	

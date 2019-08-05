@@ -5,7 +5,6 @@ import io.netty.channel.Channel;
 /**
  * actor消息上下文
  * 
- * @author huachp
  */
 public class ActorMsgContext {
 

@@ -6,7 +6,6 @@ import io.netty.channel.Channel;
 /**
  * actor服务器信息
  * 
- * @author huachp
  */
 public class ActorServerInfo {
 

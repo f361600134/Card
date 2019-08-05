@@ -16,7 +16,6 @@ import akka.actor.TypedProps;
 /**
  * 远程Actor系统
  * 
- * @author huachp
  */
 public class AkkaRemoteSys {
 	

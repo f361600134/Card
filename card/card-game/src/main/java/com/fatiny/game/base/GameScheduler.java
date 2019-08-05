@@ -18,8 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 定时器
- * 
- * @author huachp
  */
 @Slf4j
 public class GameScheduler {

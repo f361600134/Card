@@ -5,7 +5,6 @@ import com.fatiny.core.client.db.Response;
 /**
  * 消息抽象层
  * 
- * @author huachp
  */
 public abstract class AbstractDbServerMsg implements DbServerMsg {
 	

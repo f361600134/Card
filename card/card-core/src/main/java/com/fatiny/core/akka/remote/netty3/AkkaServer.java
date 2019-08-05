@@ -9,8 +9,6 @@ import akka.actor.Props;
 
 /**
  * Actor服务端, 依赖Akka的网络层调用
- * 
- * @author huachp
  */
 public class AkkaServer {
 	

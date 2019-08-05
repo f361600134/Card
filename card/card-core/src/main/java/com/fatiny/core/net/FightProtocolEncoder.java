@@ -10,7 +10,6 @@ import io.netty.handler.codec.MessageToMessageEncoder;
 /**
  * 战斗服协议编码器
  * 
- * @author huachp
  */
 public class FightProtocolEncoder extends MessageToMessageEncoder<DataCarrier> {
 

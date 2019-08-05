@@ -5,7 +5,6 @@ import akka.actor.ActorRef;
 /**
  * actor分配器
  * 
- * @author huachp
  */
 public class ServerRouteActors {
 	

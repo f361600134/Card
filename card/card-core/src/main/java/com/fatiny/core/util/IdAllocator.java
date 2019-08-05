@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * ID分配器
  * 
- * @author huachp
  */
 public interface IdAllocator {
 	

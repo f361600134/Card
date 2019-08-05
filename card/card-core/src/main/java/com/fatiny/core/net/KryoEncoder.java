@@ -11,7 +11,6 @@ import io.netty.handler.codec.MessageToByteEncoder;
 /**
  * kryo对象序列化编码器
  * 
- * @author huachp
  */
 public class KryoEncoder extends MessageToByteEncoder<Object> {
 

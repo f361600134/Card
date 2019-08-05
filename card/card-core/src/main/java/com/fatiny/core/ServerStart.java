@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 服务启动入口
  * 
- * @author huachp
  */
 @Slf4j
 public class ServerStart {

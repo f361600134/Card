@@ -10,7 +10,6 @@ import java.util.Properties;
 /**
  * Actor配置
  * 
- * @author huachp
  */
 public class ActorConfig {
 	

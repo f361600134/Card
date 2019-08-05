@@ -3,7 +3,6 @@ package com.fatiny.core.server.db.message;
 /**
  * 数据服资源请求
  * 
- * @author huachp
  */
 public class ResourceReq extends AbstractDbServerMsg {
 	

@@ -2,8 +2,6 @@ package com.fatiny.core.bootstrap;
 
 /**
  * 服务启动抽象层
- * 
- * @author huachp
  */
 public abstract class AbstractServer implements IServer {
 	

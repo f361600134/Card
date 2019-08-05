@@ -3,7 +3,6 @@ package com.fatiny.core.util;
 /**
  * ID机制帮助类
  * 
- * @author huachp
  */
 public class IdHelper {
 	

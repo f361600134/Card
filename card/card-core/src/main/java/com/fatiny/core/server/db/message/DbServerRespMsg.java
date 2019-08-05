@@ -7,7 +7,6 @@ import com.fatiny.core.client.db.Response;
 /**
  * 数据服响应协议
  * 
- * @author huachp
  */
 public class DbServerRespMsg extends AbstractDbServerMsg {
 
