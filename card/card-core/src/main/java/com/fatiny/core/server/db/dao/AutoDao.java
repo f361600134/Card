@@ -19,7 +19,6 @@ public class AutoDao {
 	public static void scan(String path) {
 		logger.info("扫描dao依赖的所有业务实体类");
 		Set<Class<?>> classes = PoRegister.scan(path);
-		
 		for (Class cls : classes) {
 			new Dao(cls);
 			logger.info("po:{}", cls);

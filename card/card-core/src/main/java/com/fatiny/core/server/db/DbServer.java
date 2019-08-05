@@ -109,7 +109,7 @@ public class DbServer extends AbstractServer {
 			bootstrap();
 			
 			// 初始化所有实体类信息
-			AutoDao.scan("com.good.module");
+			AutoDao.scan("com.fatiny.game.game");
 			
 			return true;
 		} catch (Exception e) {

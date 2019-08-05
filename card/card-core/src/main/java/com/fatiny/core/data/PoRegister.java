@@ -9,8 +9,6 @@ import com.fatiny.core.util.ClassPathScanner;
 
 /**
  * po注册
- *
- * @author chao
  */
 public class PoRegister {
 

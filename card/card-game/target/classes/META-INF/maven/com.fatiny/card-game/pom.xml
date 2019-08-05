@@ -33,7 +33,7 @@
   </dependencies>
   
     <build>
-		<finalName>card-core</finalName>
+		<finalName>card-game</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

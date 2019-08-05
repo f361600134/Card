@@ -5,8 +5,6 @@ import io.netty.channel.Channel;
 
 /**
  * 数据服信息
- * 
- * @author huachp
  */
 public class DbServerInfo {
 

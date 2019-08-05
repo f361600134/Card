@@ -43,8 +43,6 @@
 		<properties key="maxActive" value="50"/>
 	</mysql>
 	
-	
-	
 	<!-- 
 		mysql配置: druid连接池配置
 		mysql配置可配多个, 通过areaId区分, 合服添加的mysql配置即可
