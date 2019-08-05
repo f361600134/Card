@@ -22,6 +22,10 @@ public class DataContext {
 	DataContext() {
 
 	}
+	
+	public void init(SyncData syncData) {
+		this.gameData = syncData;
+	}
 
 	public DataContext depend(DbServerClient client) {
 		SyncData syncData = new SyncData();

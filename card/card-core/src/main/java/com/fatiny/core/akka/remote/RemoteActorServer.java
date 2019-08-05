@@ -99,6 +99,7 @@ public class RemoteActorServer {
 			String ip = serverConf.getIp();
 			int port = serverConf.getPort();
 			
+			log.info("远程actor server启动中... ip:{}, port:{}", ip, port);
 			bootstrap.bind(ip, port).sync();
 			log.info("远程actor server启动成功, ip:{}, port:{}", ip, port);
 		} catch (Exception e) {

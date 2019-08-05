@@ -41,7 +41,6 @@ public class GameScheduler {
 	private void init() {
 		try {
 			SchedulerFactory sf = new StdSchedulerFactory(confPath);
-			
 			sched = sf.getScheduler();
 			sched.start();
 		} catch (Exception e) {

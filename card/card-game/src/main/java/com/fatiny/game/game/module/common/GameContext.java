@@ -3,6 +3,7 @@ package com.fatiny.game.game.module.common;
 import com.fatiny.core.client.db.DbServerClient;
 import com.fatiny.core.data.DataContext;
 import com.fatiny.core.data.IData;
+import com.fatiny.core.data.SyncData;
 import com.fatiny.game.base.GameScheduler;
 
 /**
@@ -30,10 +31,11 @@ public class GameContext {
 	}
 	
 	public GameContext depend(DbServerClient client) {
-//		SyncData syncData = new SyncData();
-//		syncData.injectDbServerConnector(client);
+		SyncData syncData = new SyncData();
+		syncData.injectDbServerConnector(client);
 //		this.gameData = syncData;
 		client.init();
+		DataContext.instance().init(syncData);
 		return this;
 	}
 	
