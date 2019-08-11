@@ -18,11 +18,11 @@
 		<properties key="port" value="7020"/>
 	</fight-actor>
 	 -->
-	<fight-actor>
-		<properties key="id" value="10002"/>
-		<properties key="ip" value="172.16.1.15"/>
-		<properties key="port" value="7020"/>
-	</fight-actor>
+<!-- 	<fight-actor> -->
+<!-- 		<properties key="id" value="10002"/> -->
+<!-- 		<properties key="ip" value="172.16.1.15"/> -->
+<!-- 		<properties key="port" value="7020"/> -->
+<!-- 	</fight-actor> -->
 	
 	<log-actor>
 		<properties key="id" value="10003"/>

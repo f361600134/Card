@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <akka>
 	<netty-tcp key="ip" value="127.0.0.1" />
-	<netty-tcp key="port" value="6370" />
+	<netty-tcp key="port" value="7003" />
 	<actor-info key="actorCount" value="4" />
 </akka>

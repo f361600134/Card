@@ -11,7 +11,7 @@
 	<dbserver>
 		<properties key="id" value="1001"/>
 		<properties key="ip" value="127.0.0.1"/>
-		<properties key="port" value="3306"/>
+		<properties key="port" value="6370"/>
 	</dbserver>
 	
 	

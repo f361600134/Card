@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_2_2.xsd"
 	version="2.2">
 	<schedule>
-<!-- 		<job> -->
-<!-- 			<name>logout-event</name> -->
-<!-- 			<group>group-jobs</group> -->
-<!-- 			<job-class>com.good.module.common.job.LogoutJob</job-class> -->
-<!-- 		</job> -->
+		<job>
+			<name>logout-event</name>
+			<group>group-jobs</group>
+			<job-class>com.fatiny.game.game.module.common.job.LogoutJob</job-class>
+		</job> 
 		
 <!-- 		<job> -->
 <!-- 			<name>per-minute-event</name> -->
@@ -24,15 +24,15 @@
 <!-- 		</job> -->
 		
 
-<!-- 		<trigger> -->
-<!-- 			<cron> -->
-<!-- 				<name>logout-cron</name> -->
-<!-- 				<group>group-triggers</group> -->
-<!-- 				<job-name>logout-event</job-name> -->
-<!-- 				<job-group>group-jobs</job-group> -->
-<!-- 				<cron-expression>0 * * * * ?</cron-expression> -->
-<!-- 			</cron> -->
-<!-- 		</trigger> -->
+		<trigger>
+			<cron>
+				<name>logout-cron</name>
+				<group>group-triggers</group>
+				<job-name>logout-event</job-name>
+				<job-group>group-jobs</job-group>
+				<cron-expression>0 * * * * ?</cron-expression>
+			</cron>
+		</trigger>
 		
 <!-- 		<trigger> -->
 <!-- 			<cron> -->

@@ -23,7 +23,6 @@ public class AutoSaveJob implements Job {
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 		try {
-			log.debug("保存游戏数据");
 			GameContext.instance().gameData().executeBatchSave();
 		} catch (Exception e) {
 			log.error("延迟保存用户数据错误", e);
